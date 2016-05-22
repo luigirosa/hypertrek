@@ -18,6 +18,8 @@ Sul server ci sono due databae MySQL, **db1** (contenuti del sito) e **db2** (st
 | **utente1** | Sola lettura | Scrittura |
 | **utente2** | Scrittura    | Scrittura |
 
+Per *Scrittura* si intendono i privilegi di Select, Insert, Update e Delete; non sono necessari altri privilegi sulle tabelle. 
+
 La struttura è tale che anche una SQL injection a causa di un errore di programmazione può al massimo danneggiare dati statistici, ma non può alterare il contenuto delle pagine.
 
 La sicurezza del sistema di coontribuzione, che **non** risiede sul serve di pubblicazione è garantita da una access list del server http. Il server MySQL consente l'accesso ad **utente2** solamente dall'IP del sistema di contribuzione.
