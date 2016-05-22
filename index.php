@@ -20,7 +20,7 @@
 /**
  * Pagina principale
  *
- * Entry point della procedura di visualizzazione.<br>
+ * Entry point della procedura di visualizzazione.
  * Definisce HYPERTREK che consente di proteggere gli altri file da esecuzioni non volute.
  * Viene analizzato l'URL, sanificato e scomposto nelle varie parti per passare
  * i dati all'oggetto di costruzione della pagina.
@@ -49,7 +49,17 @@ require('include/global.php');
 require('include/menu.php');
 
 // Dati di accesso al database
-require('include/database.php');
+$a = parse_ini_file('setup.ini', true);
+// database dati read only
+$ht_db_ro_host = $a['sql']['host1'];
+$ht_db_ro_user = $a['sql']['user1'];
+$ht_db_ro_pass = $a['sql']['password1'];
+$ht_db_ro_database = $a['sql']['database1'];
+// database con statistiche e altro
+$ht_db_rw_host = $a['sql']['host2'];
+$ht_db_rw_user = $a['sql']['user2'];
+$ht_db_rw_pass = $a['sql']['password2'];
+$ht_db_rw_database = $a['sql']['database2'];
 
 // xajax
 require('xajax_core/xajax.inc.php');
