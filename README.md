@@ -11,14 +11,14 @@ La struttura originale del sito non era fatta per essere replicata facilmente.
 
 La parte amministrativa di editing dei contenuti gira su un computer diverso (tipicamente quello di casa di Luigi Rosa) dal server su cui gira il sito.
 
-Sul server ci sono due databae MySQL, **db1** (contenuti del sito) e **db2** (statistiche, log errori) e due utenti configurati **utente1** (utente utilizzato dal motore di visualizzaizone) e **utente2** (utente utilizzato dal sistema di contribuzione) con questi permessi:
+Sul server ci sono due databae MySQL, **db1** (contenuti del sito) e **db2** (statistiche, log errori) e due utenti configurati **utente1** (utente utilizzato dal motore di visualizzaizone) e **utente2** (utente utilizzato dal sistema di contribuzione) con questi privilegi:
 
 |             | **db1**      | **db2**   |
 | ----------- |:------------:|:---------:|
-| **utente1** | Sola lettura | Scrittura |
-| **utente2** | Scrittura    | Scrittura |
+| **utente1** | Select | Select, Insert, Update, Delete |
+| **utente2** | Select, Insert, Update, Delete | Select, Insert, Update, Delete |
 
-Per *Scrittura* si intendono i privilegi di Select, Insert, Update e Delete; non sono necessari altri privilegi sulle tabelle. 
+Non sono necessari altri privilegi sulle tabelle. 
 
 La struttura è tale che anche una SQL injection a causa di un errore di programmazione può al massimo danneggiare dati statistici, ma non può alterare il contenuto delle pagine.
 
