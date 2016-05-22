@@ -143,7 +143,7 @@ $TopMenu[25]['file'] = 'menu-etc.png';            $TopMenu[25]['tag'] = 'topetc'
 //$TopMenu[26]['file'] = 'menu-indice.png';         $TopMenu[26]['tag'] = 'topindice';         $TopMenu[26]['desc'] = 'Indice Analitico';
 
 // gestione menu
-require('include/menu.php');
+require('menu.php');
 
 // xajax
 require('xajax_core/xajax.inc.php');
@@ -208,7 +208,7 @@ if ($crondaily) {
 }
 
 // Oggetto che genera la pagina
-require('include/output.php');
+require('output.php');
 
 // id dell'indice da visualizzare la ficco nella variabile superglobal $_SESSION e non se ne parla piu'
 if (isset($_SESSION['ndx']) and is_numeric($_SESSION['ndx'])) {
