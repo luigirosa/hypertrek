@@ -11,7 +11,7 @@ La struttura originale del sito non era fatta per essere replicata facilmente.
 
 La parte amministrativa di editing dei contenuti gira su un computer diverso (tipicamente quello di casa di Luigi Rosa) dal server su cui gira il sito.
 
-Sul server ci sono due databae MySQL, **db1** (contenuti del sito) e **db2** (statistiche, log errori) e due utenti configurati **utente1** (utente utilizzato dal motore di visualizzaizone) e **utente2** (otente utilizzato dal sistema di contribuzione) con questi permessi:
+Sul server ci sono due databae MySQL, **db1** (contenuti del sito) e **db2** (statistiche, log errori) e due utenti configurati **utente1** (utente utilizzato dal motore di visualizzaizone) e **utente2** (utente utilizzato dal sistema di contribuzione) con questi permessi:
 
 |             | **db1**      | **db2**   |
 | ----------- |:------------:|:---------:|
