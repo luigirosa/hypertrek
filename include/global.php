@@ -45,12 +45,12 @@ if(!defined('HYPERTREK')) {
  */
 $Setup['versione']        = '3.0.0';                  // versione del software
 $Setup['idpaginadefault'] = 10;                       // id della pagina di default
-$Setup['favicon']         = '/favicon.ico';           // posizione della favicon
+$Setup['favicon']         = '/static/favicon.ico';    // posizione della favicon
 $Setup['charset']         = 'UTF-8';                  // definizione del charset
 $Setup['titolo']          = 'HyperTrek | ';           // titolo HTML di default
 $Setup['pathimmagini']    = 'immagini/';              // path delle immagini
 $Setup['pathicone']       = '/icone/';                // path delle icone
-$Setup['cssfile']         = 'hypertrek.css';          // foglio stile da utilizzare
+$Setup['cssfile']         = 'hypertrek.css';          // foglio stile da utilizzare (si trova nella cartella della skin)
 $Setup['docroot']         = '/';                      // root del sito
 $Setup['durata']          = 86400;                    // numero di secondi di durata della pagina (24 ore)
 $Setup['quantitopmenu']   = 25;                       // numero di icone del topmenu	
