@@ -1,0 +1,4 @@
+Nome skin  : Classic
+Descrizione: Hypertrek NG v.1
+Autori     : Sat'Rain
+Data       : 16.08.2008

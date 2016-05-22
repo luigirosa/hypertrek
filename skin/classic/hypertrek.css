@@ -1,0 +1,878 @@
+/* HYPERTREK
+   Skin: Classic
+*/
+
+/* un comodo default */
+html {background:#ffffff}
+
+body {
+  margin:auto;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10pt;
+  font-style: normal;
+  text-align: left;
+  color: black;
+  background: transparent url(sfondolink.png) repeat-y right;
+  /*background: #909090;*/
+}
+
+p.titoloriferimento {
+  background: #e0e0e0 none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-size: 8pt;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #ff0000;
+}
+p.plaquet1 {
+  background: white none repeat scroll 0% 50%;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 24pt;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+p.plaquest1 {
+  background: white none repeat scroll 0% 50%;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 14pt;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+p.plaquest2 {
+  background: white none repeat scroll 0% 50%;
+  font-family: serif;
+  font-weight: normal;
+  font-size: 22pt;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+p.plaquetxt1 {
+  background: white none repeat scroll 0% 50%;
+  font-family: serif;
+  font-weight: lighter;
+  font-size: 8pt;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+p.plaquequote1 {
+  background: white none repeat scroll 0% 50%;
+  font-family: serif;
+  font-weight: normal;
+  font-size: 12pt;
+  font-style: italic;
+  text-align: center;
+  color: black;
+}
+p.legtesto {
+  background: white none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10pt;
+  font-style: normal;
+  text-align: justify;
+  color: black;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 0;
+}
+table.tabella {
+  background: white none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10pt;
+  font-style: normal;
+  color: black;
+}
+table.standard {
+  background: white none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10pt;
+  font-style: normal;
+  text-align: left;
+  color: black;
+}
+table.guest {
+  background: white none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10pt;
+  font-style: normal;
+  text-align: left;
+  color: black;
+}
+table.plaque {
+  border: medium outset #c0c0c0;
+  background: white none repeat scroll 0% 50%;
+}
+table.doppiatorifilm {
+  background: white none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 8pt;
+  font-style: normal;
+  color: black;
+}
+h3 {
+  background: white none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: black;
+}
+h5 {
+  background: white none repeat scroll 0% 50%;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10pt;
+  font-style: normal;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: black;
+}
+
+
+img.allineatadestra {
+  margin-left: 4px;
+  margin-right: -3px;
+}
+
+/* -----------------------*/
+
+/* contenitore della barra di navigazione */
+div.barranavigazionecont {
+	margin: 0px 0px 0px 0%;
+	padding: 0%;
+	width: 100%;
+	background: #909090;
+    height:43px;
+    text-align:left;
+white-space:nowrap;
+}
+
+/* barra di navigazione: immagine a sinistra */
+span.barranavigazionesx {
+	margin-top: 0px;
+	/*padding-left: 0px;*/
+	/*width: 164px;*/
+	float: left;
+}
+
+/* barra di navigazione: icone */
+span.barranavigazionecn {
+	margin-top: 0;
+	padding-left: 0px;
+	/*width: 930px;*/
+	/*margin-left: 15px;*/
+	/*margin-right: 165px;*/
+}
+
+/* barra di navigazione: immagine a destra */
+span.barranavigazionedx {
+	/*margin-top: 30px;*/
+    padding-left: 0px;
+	/*width: 15px;*/
+	float: right;
+
+}
+
+/* contenitore di tutta la pagina, esclusa la barra di navigazione e il piede */
+div.contenitorepagina {
+  border-style: none;
+  border-width: 0px;
+  margin: 0px auto 0px;
+  width: 100%;
+  /*background:transparent;*/
+  background: transparent url(sfondoindice.png) repeat-y left;
+}
+
+/* contenitore dell'indice */
+div.contenitoreindice {
+  border-top: 0px solid #b0b0b0;
+  border-left: 0px solid #b0b0b0;
+  border-bottom: 0px solid #000000;
+  border-right: 0px solid #606060;
+  margin: 0;
+  float: left;
+  width: 180px;
+  min-height: 650px;
+  background: #909090; /*url(sfondomenu.png) repeat-x bottom;*/
+  /*padding-bottom:0.8em;*/
+/*  border-right: 1px dotted #996633*/
+}
+
+/* contenitore dell'intestazione dell'indice */
+div#indiceintestazione {
+}
+
+/* testo dell'intestazione dell'indice */
+div.indiceintestazionetxt {
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 0;
+	margin-top: 3pt;
+	text-align: center;
+	color: black;
+	padding-bottom:0.5em;
+}
+
+/* contenitore del testo dell'indice */
+div#indicetesto {
+}
+
+div#indicetesto a:link{ color: white }
+div#indicetesto a:hover{ color: #e0e0e0; background: #505050 }
+div#indicetesto a:active{ color: black; background:white }
+div#indicetesto a:visited{ color: #e0e0e0}
+
+/* testo dell'indice */
+div.indicetesto {
+	margin: 0 4px;
+	font-family: sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	text-align: left;
+}
+
+/* testo dell'indice se il link e' ad un menu*/
+div.indicetestomenu {
+	margin: 0 4px;
+	font-family: sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+}
+
+/* titolini nella colonna a sinistra */
+div.lastdata {
+	margin: 3pt 2px 0;
+	font-family: sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	font-style: normal;
+	text-align: center;
+	background-color: #e0e0e0;
+}
+
+/* contenitore del testo dei link */
+div.contenitorelink {
+	border-top: 0px solid #d0d0d0;
+	border-left: 0px solid #909090;
+	border-bottom: 0px solid #909090;
+	border-right: 0px solid #e0e0e0;
+	margin: 0px;
+	float: right;
+	width: 180px;
+	color: #000000;
+	font-size: 9pt;
+	text-align: justify;
+	min-height: 650px;
+	/*background: #d0d0d0 url(sfondolink.png) repeat-x bottom;*/
+	background: #d0d0d0;
+	/*margin-left: 5px;*/
+	/*padding-bottom:0.8em;*/
+/*	border-left: 1px dotted #996633*/
+}
+
+/* testo del box di ricerca */
+div.cerca {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	margin-top: 1.0em;
+	margin-bottom: 1.0em;
+}
+
+/* casella di testo del box di ricerca */
+input.cercatext {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: left;
+	color: black;
+	border: 1px solid #808080;
+}
+
+/* pulsante del box di ricerca */
+input.cercabtn {
+/*  background: #c0c0c0 none repeat scroll 0% 50%;*/
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	border: 1px solid
+}
+
+/* contenitore della parte centrale vera e propria */
+div.contenitoretesto {
+  border-top: 0px solid #996633;
+/*  border-right: 1px dotted #996633;*/
+/*  border-left: 1px dotted #996633;*/
+  margin-left: 180px;
+  margin-right: 180px;
+  min-height: 650px;
+   background-color: white;
+  /*padding-bottom:0.8em;*/
+  /*padding-left: 0.5em;*/
+  /*padding-right:0.5em;*/
+}
+
+/* contenitore della parte inferiore della pagina (footer) */
+div.contenitorefooter {
+  border-top: 1px solid #000000;
+  margin: 0;
+  /*padding: 0.5em;*/
+  clear: both;
+  color: #333333;
+  background-color: white;
+}
+
+
+/* icona della sezione ed eventuale icona della stazione */
+div.testoiconasezione {
+	float: left;
+}
+
+/* contenitore di icona di sesione, titolo e icone di navigazione */
+div.testotitolo {
+	height: 47px;
+	background: #d0d0d0;
+/*margin-left:-0.5em;*/
+/*margin-right:-0.5em;*/
+}
+
+/* testo del titolo della pagina  */
+span.testotitolotesto {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 16pt;
+	/*margin-top:10px;
+	margin-bottom: 0px;*/
+	text-align: left;
+	margin-left: 0.2em;
+	color: #000000;
+	height: 47px;
+	/*line-height: 47px;*/
+}
+
+
+/* icona con le frecce di navigazione tra gli episodi */
+div.testofreccenavigazione {
+	float: right;
+}
+
+/* testo vero e proprio della pagina sotto al titolo */
+div.testopagina {
+}
+
+/* form di ricrca */
+form#frmCerca {
+}
+
+/* pulsante di submit del form di ricrca */
+input#subCerca {
+}
+
+/* immagini in alto a destra nella colonna centrale */
+span.immaginialtodx {
+	margin-top: 0;
+	margin-left: 4px;
+	float: right;
+/*	vertical-align: top;*/
+}
+
+/* Imagine in alto a destra nella pagina */
+img.altodx {
+	/*float: right;*/
+}
+
+
+/* contenitore esterno della tabella con le tabelle dei dati e dei guest di un episodio */
+div.episodiocontenitoretabellona {
+	width: 100%;
+}
+
+/* tabella con le tabelle dei dati e dei guest di un episodio */
+table.episodiotabellona {
+}
+
+
+/* tabella a sinistra con i dati dell'episodio */
+table.episodiodati {
+  background: transparent;
+}
+
+/* tabella a destra con i guest dell'episodio */
+table.episodioguest {
+  background: transparent;
+}
+
+/* contenitore dei capitoli */
+div.testocapitolo {
+	background: transparent;
+	width: 100%;
+}
+
+/* contenitore del titolo di un capitolo */
+div.testocapitolotitolo {
+	background: #d0d0d0;
+	width: 100%;
+	min-height: 2em;
+}
+
+/* titolo di un capitolo */
+span.testocapitolotitolotesto {
+	background: transparent;
+	font-weight: bold;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	color: black;
+	float: left;
+	margin-top: 0.2em;
+	margin-left:0.5em;
+}
+
+/* icona per i link a top */
+div.testocapitolotitololinktop {
+	background: transparent;
+	margin-top: 0.2em;
+	float: right;
+	width: 32px;
+}
+
+/* testo del capitolo */
+div.testocapitolotesto {
+	margin-left: 3px;
+	margin-right: 3px;
+	text-align: justify;
+	margin-bottom: 0.8em;
+	margin-top: 0.3em;
+}
+
+/* testo del capitolo */
+ul.capitolopunto {
+	margin-right: 3px;
+	padding-left: 2em;
+	text-align: justify;
+	/*list-style-image: url(/skin/standard/bullet01.png);*/
+	margin-top: 0.1em;
+}
+
+
+/* testo standard */
+div.testostandard {
+	margin-right: 6px;
+	background: transparent;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	font-style: normal;
+	text-align: justify;
+	color: black;
+	margin-bottom: 0.3em;
+}
+
+/* contenitore del testo standard */
+div.testostandardcontenitore {
+	margin-left: 3px;
+	margin-right: 3px;
+	background: transparent;
+	width: 100%;
+}
+
+/* testo della timeline di Star Trek */
+div.timelinest {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	font-style: normal;
+	text-align: justify;
+	color: black;
+	margin-bottom: 0.3em;
+}
+
+/* contenitore della timeline di Star Trek */
+div.timelinestcontenitore {
+	background: transparent;
+	margin-left: 3px;
+	margin-right: 3px;
+	width: 100%;
+}
+
+/* icona della timeline di Star Trek*/
+img.timelinesticona {
+	margin: 0px 4px 0px -2px;
+	vertical-align: text-top;
+}
+
+/* commento alla timeline di Star Trek*/
+div.timelinestcommento {
+	font-weight: normal;
+	font-style: italic;
+	text-align: justify;
+	margin-bottom: 0;
+	margin-top: -0.5em;
+	margin-left: 1em;
+	margin-bottom: 0.3em;
+}
+
+/* contenitore degli eventi Trek */
+div.eventitrekcontenitore {
+	background: transparent;
+	margin-left: 3px;
+	margin-right: 3px;
+	width: 100%;
+}
+
+/* testo degli eventi Trek */
+div.eventitrek {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	font-style: normal;
+	text-align: justify;
+	color: black;
+	margin-bottom: 0.3em;
+}
+
+/* icona degli eventi Trek*/
+img.eventitrekicona {
+	margin: 0px 4px 0px -2px;
+	vertical-align: text-top;
+}
+
+/* commento agli eventi Trek*/
+div.eventitrekcommento {
+	font-weight: normal;
+	font-style: italic;
+	text-align: justify;
+	margin-bottom: 0;
+	margin-top: -0.5em;
+	margin-left: 1em;
+	margin-bottom: 0.3em;
+}
+
+/* riferimenti nella colonna di destra */
+div.testoriferimento {
+  margin: 0;
+  margin-bottom: 10px;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: 8pt;
+  font-weight: normal;
+  text-align: justify;
+  padding-left: 4px;
+}
+
+/* colore degli hot text standard */
+a:link {
+  color: #009900;
+  text-decoration: none;
+}
+a:visited {
+  color: #006600;
+  text-decoration: none;
+}
+a:active {
+  color: #00ff00;
+  text-decoration: none;
+}
+a:hover {
+  color: #ee0000;
+  text-decoration: none;
+}
+
+/* colore degli hot text dei link esterni */
+a.esterno:link {
+  color: #009900;
+  text-decoration: none;
+}
+a.esterno:visited {
+  color: #006600;
+  text-decoration: none;
+}
+a.esterno:active {
+  color: #00ff00;
+  text-decoration: none;
+}
+a.esterno:hover {
+  color: #0000aa;
+  text-decoration: none;
+}
+
+/* paragrafo delle apprizioni del cast */
+div.apparizionicast {
+	margin-left: 3px;
+	margin-right: 3px;
+	text-align: justify;
+	margin-bottom: 0.5em;
+	margin-top: 0.1em;
+}
+
+/* Testo "classifica" nella pagina quante volte */
+div.qvclassificatitolo {
+	margin-left: 3px;
+	margin-bottom: 0.1em;
+	margin-top: 0.5em;
+}
+
+/* lista ordinata nella pagina quante volte */
+ol.qvclassifica {
+	margin-left: 3px;
+	text-align: justify;
+	margin-top: 0.1em;
+}
+
+/* titolo dei capitoletti della pagina delle statistiche */
+div.statistichetitolo {
+	background: transparent;
+  font-family: sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	font-style: normal;
+	text-align: left;
+	color: black;
+  margin-left: 3px;
+  margin-right: 3px;
+	margin-top: 0.5em;
+}
+
+/* testo della pagina delle statistiche */
+div.statistiche {
+	background: transparent;
+  font-family: sans-serif;
+	font-weight: normal;
+	font-size: 9pt;
+	font-style: normal;
+	text-align: left;
+	color: black;
+  margin-left: 10px;
+  margin-right: 3px;
+}
+
+/* blocco del titolo del sito nella copertina */
+div.copertinatitolo {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 10pt;
+  font-style: normal;
+  text-align: center;
+  color: black;
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+
+/* blocchi di testo "grosso" nella copertina */
+div.copertinagrosso {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18pt;
+  font-style: normal;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  color: black;
+}
+
+/* citazione casuale nella copertina */
+div.copertinarandomquote {
+  border: 0px;
+  padding: 3px;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 9pt;
+  font-style: normal;
+  text-align: left;
+  color: black;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background: #e0e0e0;
+}
+
+/* blocco del disclaimer in fondo alla copertina */
+div.copertinadisclaimer {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  font-style: normal;
+  text-align: center;
+  color: black;
+  margin-top: 0.8em;
+  margin-bottom: 0;
+  background: #e0e0e0;
+  padding: 0.5em;
+}
+
+/* dedica dei film */
+div.dedicafilm {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
+  font-style: italic;
+  text-align: center;
+  color: black;
+}
+
+/* indicazione della stagione di una serie nella timeline */
+div.ttstagione {
+	background: #e0e0e0;
+	font-weight: bold;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	margin-top: 0.5em;
+}
+
+/* testo della pagina "mappa del sito" */
+div.mappadelsito {
+	margin-top: 0;
+	margin-right: 5px;
+	margin-bottom: 0.2em;
+	margin-left: 5px;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 9pt;
+	font-style: normal;
+	text-align: justify;
+	color: black;
+}
+
+/* pie di pagina: titolo originale */
+/* ********** RIMOSSO ***********
+div.piedipaginaoriginale {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: left;
+	margin-right: 1.0em;
+	padding-left:0.5em;
+}
+*/
+
+/* pie di pagina: testo */
+div.piedipaginatesto {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: center;
+}
+
+/* pie di pagina: ultimo aggiornamento */
+div.piedipaginaultimoaggiornamento {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: right;
+	margin-left: 1.0em;
+	padding-right:0.5em;
+}
+
+/* pie di pagina: ultimo aggiornamento */
+div.gnufdl {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: center;
+	margin-top: 0.2em;
+}
+
+/* statistiche: dettaglio dei capitoli */
+ul.statistichepunto {
+	margin-right: 3px;
+	padding-left: 2em;
+	text-align: justify;
+	margin-top: 0;
+	margin-bottom: 0;
+  font-size: 8pt;
+}
+
+/* testo preformattato */
+pre {
+	font-family: monospace;
+  font-size: 9pt;
+}
+
+/* riga dell'elenco delle skin */
+div.elencoskin {
+        margin-bottom: 1em;
+}
+
+/* pulsante per la selezione di una skin */
+input.elencoskinbtn {
+        font-family: sans-serif;
+        font-weight: normal;
+        font-size: 8pt;
+        font-style: normal;
+        text-align: center;
+        color: black;
+        border: 1px solid
+}
+
+/* intestazione dei capitoli della legenda */
+div.legendaintestazione {
+  background: #d0d0d0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  font-style: normal;
+  text-align: left;
+  color: black;
+  padding-left: 1.0em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+/* tabella della legenda */
+table.legenda {
+}
+
+/* log delle modifiche */
+div.logmodifiche {
+font-size: 8pt;
+}
+
+span.episodiodatitesto {
+        font-weight: bold;
+        font-size: 9pt;
+        margin-top: 0;
+}
+
+span.testotitolotestoori {
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 12pt;
+	text-align: left;
+	margin-left: 0.2em;
+	color: #000000;
+}

@@ -1,0 +1,4 @@
+Nome skin  : Dynamic
+Descrizione: Barra superiore con icone scorrevoli
+Autori     : Sat'Rain
+Data       : 18.08.2008
