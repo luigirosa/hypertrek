@@ -50,21 +50,23 @@ session_start();
 
 // leggo alcuni parametri da setup.ini
 $a = parse_ini_file('setup.ini', true);
-$Setup['db_ro_host']     = $a['sql']['host1'];       // host db readonly
-$Setup['db_ro_user']     = $a['sql']['user1'];       // utente db readonly
-$Setup['db_ro_pass']     = $a['sql']['password1'];   // password db readonly
-$Setup['db_ro_database'] = $a['sql']['database1'];   // database readonly
-$Setup['db_rw_host']     = $a['sql']['host2'];       // host db readwrite
-$Setup['db_rw_user']     = $a['sql']['user2'];       // utente db readwrite
-$Setup['db_rw_pass']     = $a['sql']['password2'];   // password db readwrite
-$Setup['db_rw_database'] = $a['sql']['database2'];   // database readonly
-$Setup['baseurl']        = $a['setup']['baseurl'];   // URL di base del sito senza slash finale
+$Setup['db_ro_host']     = $a['sql']['host1'];           // host db readonly
+$Setup['db_ro_user']     = $a['sql']['user1'];           // utente db readonly
+$Setup['db_ro_pass']     = $a['sql']['password1'];       // password db readonly
+$Setup['db_ro_database'] = $a['sql']['database1'];       // database readonly
+$Setup['db_rw_host']     = $a['sql']['host2'];           // host db readwrite
+$Setup['db_rw_user']     = $a['sql']['user2'];           // utente db readwrite
+$Setup['db_rw_pass']     = $a['sql']['password2'];       // password db readwrite
+$Setup['db_rw_database'] = $a['sql']['database2'];       // database readonly
+$Setup['baseurl']        = $a['setup']['baseurl'];       // URL di base del sito senza slash finale
+$Setup['crondailyfile']  = $a['setup']['crondailyfile']; // file di semaforo per eseguire le operazioni giornaliere
+$Setup['sitemapname']    = $a['setup']['sitemapname'];   // nome del file del sitemap
+$Setup['rsslast']        = $a['setup']['rsslast'];       // nome del file con il feed RSS delle ultime modifiche
 
 // e gli altri sono hardcoded
 $Setup['versione']        = '3.0.0';                  // versione del software
 $Setup['idpaginadefault'] = 10;                       // id della pagina di default
 $Setup['favicon']         = '/static/favicon.ico';    // posizione della favicon
-$Setup['charset']         = 'UTF-8';                  // definizione del charset
 $Setup['titolo']          = 'HyperTrek | ';           // titolo HTML di default
 $Setup['pathimmagini']    = 'immagini/';              // path delle immagini
 $Setup['pathicone']       = '/icone/';                // path delle icone
@@ -73,7 +75,6 @@ $Setup['docroot']         = '/';                      // root del sito
 $Setup['durata']          = 86400;                    // numero di secondi di durata della pagina (24 ore)
 $Setup['quantitopmenu']   = 25;                       // numero di icone del topmenu	
 $Setup['giornilast']      = 864000;                   // numero di secondi di vecchiaia della pagina perche' compaia nelle ultime modifiche (10g)
-$Setup['rsslast']         = 'ultimemodifiche.xml';    // nome del file con il feed RSS delle ultime modifiche
 $Setup['idcampoflotta']   = 92;                       // id della tabella episodicampi del record che indica l'appartenenza ad una flotta di un'astronave
 $Setup['idcampoclasse']   = 93;                       // id della tabella episodicampi del record che indica l'appartenenza ad una classe di un'astronave
 $Setup['idcampoassegna']  = 85;                       // id della tabella episodicampi del record che indica l'assegnamento ad un'astronave; utilizzato per calcolare automaticamente l'appartenenza ad un'astronave
@@ -83,8 +84,6 @@ $Setup['idsezionebase']   = 202;                      // id della sezione delle 
 $Setup['cloudhm']         = 100;                      // quanti elementi devono essere visualizzati nella tag cloud
 $Setup['cloudpxmin']      = 15;                       // dimensione minima in pixel del font nella tag cloud
 $Setup['cloudpxmax']      = 40;                       // dimensione massima in pixel del font nella tag cloud
-$Setup['sitemapname']     = 'sitemapinfo.xml';        // nome del file del sitemap
-$Setup['crondailyfile']   = 'cron.daily';             // file di semaforo per eseguire le operazioni giornaliere
 
 // tipi delle sezioni
 $tipopagina = array();

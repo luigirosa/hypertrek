@@ -432,7 +432,7 @@ class ht_pagina {
 		if ($this->aPagina['tipo'] == $tipopagina['errore404']) {
 			header("HTTP/1.0 404 Not Found");
 		}
-		header("Content-Type: text/html; charset=" . $this->aSetup['charset']);
+		header("Content-Type: text/html; charset=UTF-8");
 		header("Last-Modified: " . date('r',$this->aPagina['lastmod']));
 		header("Expires: " . date('r', time() + $this->aSetup['durata']));
 		echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
@@ -449,7 +449,7 @@ class ht_pagina {
 		echo "\n<meta property='fb:admins' content='hypertrek' />";
 		echo "\n<meta property='og:image' content='http://ng.hypertrek.info/skin/standard/menu.png' />";
 		echo "\n<meta property=\"og:url\" content=\"" . $this->aSetup['baseurl'] . "/index.php/". $this->aPagina['tag'] . "\" />";
-		echo "\n<meta http-equiv='Content-Type' content='text/html; charset=" . $this->aSetup['charset'] . "' />";
+		echo "\n<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>";
 		echo "\n<meta http-equiv='x-dns-prefetch-control' content='off' />";
 		echo "\n<meta name='generator' content='HyperTrek:NG Content Engine v" . $this->aSetup['versione'] . " by Luigi Rosa' />";
 		echo "\n<link rel=\"meta\" href=\"" . $this->aSetup['baseurl'] . "/labels.rdf\" type=\"application/rdf+xml\" title=\"ICRA labels\" />";

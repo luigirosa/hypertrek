@@ -10,3 +10,6 @@ password2 = trekhyper
 
 [setup]
 baseurl = "https://hypertrek.info"
+crondailyfile = "cron.daily"
+sitemapname = "sitemapinfo.xml"
+rsslast = "ultimemodifiche.xml"
