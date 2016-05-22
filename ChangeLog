@@ -1,0 +1,37 @@
+HyperTrek ChangeLog
+-------------------------
+
+3.0.0
+ * Porting su GitHub, Continuous Delivery
+
+2.2.5 - 20151225
+ * Supporto https
+ * Aggiunto parametro di setup baseurl
+
+2.2.4 - 20120818
+ * La creazione del sitemap e' interna al motore
+ * Aggiunta funzione di cron giornaliero
+
+2.2.3 - 20111105
+ * Aggiunti metatag Opengraph http://ogp.me/
+ * Passaggio a XHTML 1.0 Transitional
+
+2.2.2 - 20110313
+ * Eliminati alcuni DIV e sostiruiti con le tabelle standard
+ * Disabilitato il DNS prefetching lato client
+
+2.2.1 - 20101121
+ * Corretto link a memory alpha
+
+2.2.0 - 20100131
+ * Release
+
+
+
+
+Modifiche rispetto alla 2.1
+ * Riescritta la gestione dei menu, aggiunte due tabelle (menu, paginemenu)
+ * Le pagine possono appartenere a piu' menu
+ * Aggiunto campo serie alla tabella pagine per identificare la serie di un episodio
+ * Rimosso l'indice alfabetico
+
