@@ -1,0 +1,520 @@
+/* HyperTrek main style sheet */
+
+
+/* 
+  Colori dei link, non ancora sistemati 
+*/
+A:link { 
+	color: #008000; 
+	text-decoration: none;
+}
+A:visited { 
+	color: #004000; 
+	text-decoration: none;
+}
+A:active { 
+	color: #00C000; 
+	text-decoration: none;
+}
+A:link:hover 
+	{ color: #4000FF; 
+	text-decoration: none;
+}
+A:link.esterno 
+	{ color: #008000; 
+	text-decoration: none; 
+}
+A:hover.esterno { 
+	color: #008000; 
+	text-decoration: none; 
+}
+A:link.umbra { 
+	color: #008000; 
+	text-decoration: none; 
+	background-color: white;
+}
+A:hover.umbra { 
+	color: #008000; 
+	text-decoration: none; 
+	background-color: #99CCFF;
+}
+A:link.mailto {
+	color: #008000; 
+	text-decoration: none; 
+	background-color: white;
+}
+A:hover.mailto { 
+	color: #008000; 
+	text-decoration: none; 
+	background-color: #CCFFFF;
+}
+A:link.news { 
+	color: #008000; 
+	text-decoration: none; 
+	background-color: white;
+}
+A:hover.news { 
+	color: #008000; 
+	text-decoration: none; 
+	background-color: #FFCCFF;
+}
+A:link.nav { 
+	color: #008000; 
+	text-decoration: none; 
+	background-color: white;
+}
+A:hover.nav { 
+	color: #008000; 
+	text-decoration: none; 
+	background-color: #EEEEEE;
+}
+
+TEXTAREA { 
+	font-family: "Arial", "Helvetica", sans-serif; 
+	font-weight: normal; 
+	font-size: 9pt; 
+	font-style: normal; 
+	text-align: left; 
+	color: black; background: white; 
+} 
+
+/* Testo standard */ 
+
+BODY { 
+	font-family: "Arial", "Helvetica", sans-serif; 
+	font-weight: normal; 
+	font-size: 10pt; 
+	font-style: normal; 
+	text-align: left; 
+	color: black; 
+	background: white; 
+}
+
+/* 
+  come BODY, ma centrato
+*/
+P.centrato { 
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-weight: normal;
+       	font-size: 10pt;
+       	font-style: normal;
+       	text-align: center;
+       	color: black;
+       	background: white; 
+}
+
+/* 
+  Pie` di pagina
+*/
+TABLE.piepagina {
+	font-family: "Arial", "Helvetica", sans-serif;
+       	font-weight: normal;
+       	font-size: 8pt;
+       	font-style: normal;
+       	color: black;
+       	background: white;
+}
+
+/* 
+  Tabella generica, potrebbe non essere utilzizata
+*/
+ TABLE.tabella {
+ 	font-family: "Arial", "Helvetica", sans-serif;
+       	font-weight: normal;
+       	font-size: 10pt;
+       	font-style: normal;
+       	color: black;
+       	background: white;
+}
+
+/* 
+ Master table
+*/
+TABLE.mastertable { 
+	background: #c0c0c0;
+}
+
+/* 
+  Tabella standard
+*/
+TABLE.standard { 
+	font-family: "Arial", "Helvetica", sans-serif;
+       	font-weight: normal;
+       	font-size: 10pt;
+       	font-style: normal;
+       	text-align: left;
+       	color: black;
+       	background: white;
+}
+
+/* 
+  Tabella dei dati dell'episodio (data, regista, ...)
+*/
+TABLE.datiepisodio {
+	font-family: "Arial", "Helvetica", sans-serif;
+       	font-weight: normal;
+       	font-size: 10pt;
+       	font-style: normal;
+       	text-align: left;
+       	color: black;
+       	background: white;
+}
+
+/* 
+  Tabella degli attori ospiti
+*/
+TABLE.guest {
+	font-family: "Arial", "Helvetica", sans-serif;
+       	font-weight: normal;
+       	font-size: 10pt;
+       	font-style: normal;
+       	text-align: left;
+       	color: black;
+       	background: white;
+}
+
+/* 
+  Tabella dell'intestazione dei capitoli (Note, YATI, ...)
+*/
+ TABLE.intestazione {
+ 	font-family: "Arial", "Helvetica", sans-serif;
+   	font-weight: bold;
+	font-size: 12pt;
+       	font-style: normal;
+       	text-align: left;
+       	color: black;
+       	background: #c0c0c0;
+}
+
+
+/* 
+  Tabella delle news
+*/
+TABLE.news {
+	font-family: "Arial", "Helvetica", sans-serif;
+       	font-weight: normal;
+       	font-size: 10pt;
+       	font-style: normal;
+       	text-align: left;
+       	color: black;
+       	background: white;
+}
+
+
+/* 
+  Targa commemorativa delle astronavi
+*/
+TABLE.plaque {
+	background: white;
+	border-width: medium;
+	border-color: #c0c0c0;
+	border-style: outset;
+}
+
+
+/* 
+  Tabella della barra di navigazione
+*/
+TD.topmenu { 
+	font-size: 10pt;
+       	text-align: center;
+       	margin-bottom: 0;
+       	margin-top: 0;
+       	background: #c0c0c0;
+}
+
+/* 
+  Titolo standard
+*/
+TD.titolo { 
+	font-size: 11pt;
+    color: black;
+	text-align: center;
+	margin-bottom: 0;
+	font-weight: bold;
+	margin-top: 0;
+	background: #c0c0c0;
+}
+
+/* 
+  Intestazione delle news
+*/
+TH.newshead {
+	font-family: "Aero", "Arial", "Helvetica", sans-serif;
+       	font-weight: normal;
+       	font-size: 16pt;
+       	font-style: normal;
+       	text-align: center;
+       	color: red;
+       	background: white;
+}
+
+/* 
+  Testo preformattato usato principalmente per i brani degli script
+*/
+PRE { 
+	font-size: 9pt; 
+}
+
+/* 
+  Cella della tabella master con il titolo
+*/
+TD.mastertitolo { 
+    height: 50px;
+    font-family: "Aero", "Arial", "Helvetica", sans-serif;
+    font-weight: normal;
+    font-size: 16pt;
+	margin-bottom: 0;
+    margin-top: 0;
+    font-style: normal;
+    text-align: left;
+    color: black;
+    background: #c0c0c0;
+}
+
+/* 
+  Cella della tabella master con i riferimenti ad altre pagine
+*/
+TD.masterriferimenti { 
+	font-weight: normal;
+       	font-size: 8pt;
+       	font-style: normal;
+       	text-align: center;
+       	background: #c0c0c0;
+}
+
+/* 
+  Immagine con il titolo del sito nella colonna di menu
+*/
+P.menutitolosito { 
+	font-size: 8pt;
+       	text-align: center;
+       	margin-bottom: 0;
+       	margin-top: 0;
+       	background: #c0c0c0;
+}
+
+/* 
+  Titolo di un riferimento ad altra pagina
+*/
+P.titoloriferimento { 
+       	font-size: 8pt;
+       	font-weight: bold;
+       	text-align: center;
+       	margin-bottom: 0;
+       	margin-top: 0;
+       	color: #FF0000;
+       	background: #c0c0c0;
+}
+
+/* 
+  Cella della tabella master con il messaggio del giorno (MOTD)
+*/
+TD.mastermotd {
+	font-family: "Arial", "Helvetica", sans-serif;
+	margin-top: 18pt;
+	font-weight: normal;
+       	font-size: 8pt;
+       	font-style: normal;
+       	text-align: left;
+       	background: #c0c0c0;
+}
+
+/* 
+  Cella della tabella master con l'indice
+*/
+TD.masterindice { 
+	font-weight: normal;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: left;
+	background: #c0c0c0;
+}
+
+/* 
+  Titolo dell'indice
+*/
+P.titoloindice { 
+	color: #FF0000;
+       	font-size: 9pt;
+       	font-weight: bold;
+       	font-style: normal;
+       	margin-bottom: 0;
+       	margin-top: 3pt;
+       	text-align: center;
+	background: #c0c0c0;
+}
+
+/* 
+  Testo dell'indice
+*/
+P.testoindice { 
+	font-size: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	margin-bottom: 0;
+	margin-top: 0pt;
+	text-align: left;
+}
+
+/* 
+  Data nell'elenco delle ultime modifiche
+*/
+P.lastdata { 
+	font-size: 8pt;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 0;
+	margin-top: 3pt;
+	text-align: center;
+	background: #c0c0c0;
+}
+
+/* 
+  Cella della tabella master con i dati
+*/
+TD.masterdati { 
+	background: white;
+}
+
+TD.cellatesto { 
+	background: white 
+}
+
+/* 
+  Titolo di primo tipo della targa commemorativa
+*/
+P.plaquet1 {
+	font-family: "Times New Roman", "Times", serif;
+	font-weight: bold;
+	font-size: 24pt;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	background: white;
+}
+
+/* 
+  Sottotitolo di primo tipo della targa commemorativa
+*/
+P.plaquest1 {
+	font-family: "Times New Roman", "Times", serif;
+	font-weight: bold;
+	font-size: 14pt;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	background: white;
+}
+
+/* 
+  Sottotitolo di secondo tipo della targa commemorativa
+*/
+P.plaquest2 {
+	font-family: "Times New Roman", "Times", serif;
+	font-weight: normal;
+	font-size: 22pt;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	background: white;
+}
+
+/* 
+  Testo di primo tipo della targa commemorativa
+*/
+P.plaquetxt1 {
+	font-family: "Times New Roman", "Times", serif;
+	font-weight: lighter;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: center;
+	color: black;
+	background: white;
+}
+
+/* 
+  Citazione di primo tipo della targa commemorativa
+*/
+P.plaquequote1 {
+	font-family: "Times New Roman", "Times", serif;
+	font-weight: normal;
+	font-size: 12pt;
+	font-style: italic;
+	text-align: center;
+	color: black;
+	background: white;
+}
+
+/* 
+  Note alle fonti della timeline
+*/
+P.ttnote {
+	font-weight: normal;
+	font-style: italic;
+    margin-bottom: 0;
+    margin-top: -1em;
+    margin-left: 1em;
+}
+
+/* 
+  indicazione della stagine nella timeline
+*/
+P.ttstagione {
+	font-size: 11pt;
+	font-weight: bold;
+	font-style: normal;
+	text-align: center;
+	background: #c0c0c0;
+}
+
+/* 
+  per la copertina
+*/
+H2 {
+	font-family: "Aero", sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
+    font-style: normal;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    color: black;
+    background: white;
+}
+
+H3 {
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-weight: normal;
+    font-size: 12pt;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: black;
+    background: white;
+}
+
+H4 {
+	font-family: "Arial", "Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    font-style: normal;
+    text-align: center;
+    color: black;
+    background: #c0c0c0;
+}
+
+H5 {
+	font-family: "Arial", "Helvetica", sans-serif;
+    font-weight: normal;
+    font-size: 10pt;
+    font-style: normal;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+    background: white;
+}
+
+
