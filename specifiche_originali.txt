@@ -1,0 +1,236 @@
+
+                                Strutture dati
+
+pagine
+   Tabella master delle pagine. I campi sono descritti nei commenti MySQL.
+
+sezioni
+   Dati di una sezione.
+   Il campo icona determina l'icona che viene visualizzata nell'intestazione
+   della pagina.
+   Il  tipo  è un campo numerico che identifica il tipo di pagina mappato
+   attraverso un array pubblico $tiposezione definito in conf/global.php che
+   per ora è:
+     * 0 (generica): pagina generica: testo, foto e basta
+     * 1 (episodio): scheda di un episodio con guest a destra, intestazione
+       particolare
+     * 2 riservata per uso futuro
+     * 3 (classe): classe di astronavi
+     * 4 (news): pagina della news
+     * 5 (personaggio): pagina dei personaggi; prevede gli assegnamenti ed
+       elenca gli episodi in cui compare
+     * 6 (quantevolte): quante volte, deve prevedere un titolo con la conta
+       degli item e un eventuale classifica
+     * 7 (cast): cast regolare di una serie
+     * 8 (recurring): personaggi ricorrenti
+     * 9 (tabellariass): tabella riassuntiva degli episodi
+     * 10  (libro):  scheda  di  un libro, non può essere uguale a quella
+       dell'episodio per via della foto al posto del cast
+     * 11 (timeline): scheda della timeline
+     * 12 (attore): scheda di un attore, si va a cercare da sola l'elenco degli
+       episodi
+     * 13 (astronave): astronave
+     * 14 (astrospecie): 'padre' delle astronavi di una specie, serve per
+       creare la gerarchia degli indici
+     * 15 (statistiche): pagina speciale delle statistiche
+
+   Manca comunque della roba, che verrà codificata, se necessario, in seguito.
+
+episodicampi
+
+   Dati descrittivi dei campi degli episodi e definizione del loro ordine di
+   visualizzazione.
+
+episodivalori
+
+   Dati tabellari (quelli diversi dai guest che in HT compaiono prima del
+   riassunto) veri e propri degli episodi.
+   Legati tramite idpagina alla tabella delle pagine. La parte descrittiva del
+   campo è definita nella tabella episodicampi.
+
+guest
+
+   Tabella  di link tra le pagine, il cast e i personaggi. Da vedere come
+   risolvere gli attori protagonisti.
+
+capitolitipi
+
+   Definizione delle caratteristiche di presentazione dei capitoli.
+
+capitoli
+
+   Testi che sono preceduti da un'intestazione.
+   Manca la possibilità di associare una o più immagini, deve essere prevista.
+
+testi
+
+   Testo 'normale' di una scheda, separato dalla tabella capitoli per evitare
+   di fare una tabella troppo grossa.
+   Manca la possibilità di associare una o più immagini, deve essere prevista.
+
+immaginipagine
+
+   Tabella di raccordo molti-molti per capire in quali pagine va un'immagine.
+
+piepagina
+
+   Testi che devono essere mostrati a pié di pagina.
+
+tabelle
+
+   Dati delle tabelle a due o a tre colonne per vario utilizzo. Il campo
+   istitolo serve ad itentificare i titoli a cavallo delle colonne usato nella
+   timeline.
+
+quantevolte
+
+   Elenco dei campi per le schede omonime, è previsto un campo su cui fare
+   somme e classifiche. Se il campo oggetto della pagina è uno, la scheda ha
+   una classifica
+
+riferimenti
+
+   Elenco dei riferimenti ad altre pagine. Se la pagina A referenzia la pagina
+   B e la pagina B referenzia la pagina A, ci devono essere due record di
+   questa tabella, non esiste referenziazione inversa implicita. Se ciò non è
+   elegante dal punto di vista della struttura del database, risulta per ora
+   più pratico in fase di visualizzazione.
+   Il campo hardcoded> indica il tipo di azione necessaria per elaborare il
+   link: se vale zero il campo riferimento deve essere filtrato dalla funzione
+   espandiLink prima di essere visualizzato, se vale uno il campo deve essere
+   visualizzato così com'è.
+
+topmenu
+
+   Contenuto del menu superiore con la barra di navigazione
+
+analitico
+
+   Chiavi dell'indice analitico
+
+                                   Algoritmi
+
+Struttura delle directory
+
+   La directory root di NG contiene il file INDEX.PHP (l'unico file richiamato
+   dagli utenti) e una serie di subdir:
+     * conf con i file php di configurazione
+     * icone con le icone utilizzate dall'interfaccia
+     * immagini con le immagini usate da NG organizzate in subdir, una per ogni
+       sezione
+     * include con gli include file che contengono la procedura vera e propria
+     * style con i fogli stile
+
+index.php
+
+   File principale di NG, se richiamato senza parametri carica la pagina di
+   default. È l'unica pagina che può essere richiamata dal browser, gli altri
+   file rispondono picche (anzi, non rispondono proprio nulla per ora).
+   La pagina da caricare viene indicata in vari modi:
+    1. http://..../index.php/dsn001
+    2. http://..../index.php/dsn/dsn001.html
+    3. http://..../index.php/?tag=dsn001
+    4. http://..../index.php/dsn-dsn-001?ndx=47
+
+   La (1) è il modo standard di referenziare le pagine in NG, la (4) il modo
+   standard  con la definizione della pagina di indice da mostrare, usata
+   prevalentemente durante la navigazione all'interno di NG. La (3) viene
+   comunque supportata (con o senza variabile ndx), ma non è usata all'interno
+   di NG. La (2) serve per permettere di convertire agevolmente i link esterni
+   che referenziano HT senza troppe difficolta' e per il file goto.html, che
+   verrà riscritto quando NG andrà online.
+   La procedura PHP dentro il file passa il tag specificato nell'URL alla
+   funzione di creazione di una nuova istanza di un oggetto pagina.
+
+conf/global.php
+
+   Contiene la definizione delle variabili globali utilizzate dalla procedura.
+   Qui ci vanno solamente delle variabili, nient'altro.
+
+conf/database.php
+
+   Chiamate  alle procedure di apertura della connessione con il database
+   server. In qualche punto del futuro la gestione dell'interfaccia con il
+   database potrebbe essere sostituita con i PDO.
+
+include/output.php
+
+   Definizione della classe pagina, che utilizza i seguenti metodi (molti dei
+   quali privati):
+     * costruttore: inizializza le veriabili e gli header HTML. Decide se il
+       tag e' un ID numerico o un tag alfabetico e si comporta di conseguenza
+     * aggiungiHeader: aggiunge un header HTML
+     * aggiungiMeta: aggiunge un MetaTag HTML
+     * aggiungiRiferimento: aggiunge un riferimento alla colonna di destra
+     * scrivi: funzione principale di output, costruisce la gabbia di tabelle
+       della pagina e la riempie richiamando le varia funzioni in realzione al
+       tipo di dati da visualzizare
+     * scriviHead: scrive il container HEAD e il suo contenuto
+     * scriviTopmenu: scrive il manu superiore con la barra di navigazione
+     * scriviTitolo: scrive il titolo della pagina con i gadget di navigazione,
+       le icone...
+     * scriviDatiEpisodio: crea una tabella con due celle all'interno delle
+       quali ci sono due tabelle: i dati dell'episoido e gli attori ospiti
+     * scriviImmagini: visualizza le immagini, la posizione è specificata da un
+       parametro.
+     * scriviCapitoli: scrive le parti di testo con intestazione (47, yati,
+       note...)
+     * scriviTesti: scrive le parti di testo senza intestazione
+     * scriviRiferimenti: popola la colonna destra dei riferimenti
+     * scriviPiede:   scrive  la  fine  della  pagina:  ultima  modifica,
+       rettangolini...
+     * scriviIndice: popola la colonna sinistra dell'indice
+     * scriviApparizioniCast: popola tabelle delle apparizioni del cast
+     * calacolaApparizioniPersonagio: cerca le apparizioni di un personaggio e
+       le aggiunge ai riferimenti
+     * espandiLink: converte i link { | } in link HTML. Verrà ampliata per
+       supportare anche la classe del link.
+     * costruisciURL(tag, anchor): costruisce un URL da usare in un campo A
+       HREF tenendo conto di tutte le impostazioni. Il secondo parametro è
+       facoltativo. È l'unica funzione che deve essere usata per generare il
+       contenuto di A HREF.
+     * costruisciURLimmagine(file, descrizione): costruisce la parte iniziale
+       del  tag  IMG  tenendo conto di tutte le impostazioni. Se il primo
+       carattere del file dell'immagine è un '/' viene ignorato il path di
+       default delle immagini. È l'unica funzione che deve essere usata per
+       generare il tag delle immagini.
+
+include/funzioni.php
+
+   Funzioni utilizzate in varie parti della procedura:
+     * readsetup/writesetup: leggono/scrivono valori di setup
+
+                                  Conversione
+
+Vecchi file
+
+   Per un (bel) po' di tempo rimarranno al posto dei vecchi file dei file che
+   ridirigeranno  il  browser  sul nuovo URL. Questi file verranno creati
+   algoritmicamente once and for all prima di fare la conversione definitiva.
+   Domanda:  esiste  il  modo  per far tornare un codice HTTP 301 ('moved
+   permanently') semplicemente mettendo un header in un file HTML, non PHP?
+
+                              Gabbia della pagina
+
+   La gabbia attuale della pagina è:
+
+   icone delle sezioni
+   indice titolo
+   dati
+
+
+
+
+
+
+   riferimenti
+   motd
+
+   Le proporzioni non sono quelle originali.
+     _________________________________________________________________
+
+       Questo documento è scritto con [1]vi (improved), abbiate pazienza.
+
+References
+
+   1. http://www.vim.org/

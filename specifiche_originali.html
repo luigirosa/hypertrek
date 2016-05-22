@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='it'>
+<head>
+<title>HyperTrek NG - Specifiche</title>
+<link rel='SHORTCUT ICON' HREF='/favicon.ico'>
+<link rel='stylesheet' HREF='style/specs.css'>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<meta http-equiv='PRAGMA' content='NO-CACHE'>
+<meta http-equiv='CACHE-CONTROL' content='NO-CACHE'>
+</head>
+<body>
+
+<h1>Terminologia</h1>
+In questo documento <b>HT</b> identifica la versione HTML pura di HyperTrek e <b>NG</b> la versione PHP+SQL oggetto di queste specifiche.<br>
+Alla fine della conversione rester&agrave; solamente HyperTrek.
+
+<h1>Master To Do List</h1>
+<ul>
+<li>Importazione da HT</li>
+<li>Generazione delle pagine per la visione offline</li>
+<li>Indici.</li>
+<li>Cast regolare di una serie</li>
+<li>Recurring</li>
+<li>Tabella riassuntiva episodi</li>
+<li>Display indice analitico</li>
+<li>Automatizzare le news con aposita tabella e data di scadenza/inizio</li>
+</ul>
+
+<h1>To Do List</h1>
+<ul>
+<li>Sistemare i problemi evidenziati da tre asterischi '***' nei commenti dei sorgenti</li>
+<li>Non tutti i testi visualizzati sono richiamati da espandiLink, verificare</li>
+<li>modificare il CSS delle liste UL in modo che abbiano meno rientro</li>
+<li>Pagine speciali</li>
+<li>Prima della release togliere i meta 'no cache' e stabilire una policy di cache</li>
+<li>Prima della release rimettere a posto il calcolo del 'last'</li>
+<li>Ottimizzare le SELECT * con i nomi dei campi ove sia sensato farlo</li>
+<li>Modificare il codice di goto.html</li>
+</ul>
+
+
+<h1>Strutture dati</h1>
+<h2>pagine</h2>
+<p>Tabella master delle pagine, contiene il tag della pagina, il titolo, la data/ora di ultima modifica, l'id della 
+sezione e della sottosezione per l'indice e il path in formato UNIX di HT.<br>
+Il campo <i>oggetto</i> contiene dei valori particolari. Se la pagina &egrave; quella delle news contiene l'ID della tabella schede2valori 
+che contiene le news. Se la pagina &grave; un'astronave contiene l'ID della pagina della sua classe.
+&Egrave; un po' una truffa, ma serve per risparmiare tante complicazioni.</p>
+
+<h2>sezioni</h2>
+<p>Dati di una sezione.<br>
+Il campo icona determina l'icona che viene visualizzata nell'intestazione della pagina.<br>
+Il tipo &egrave; un campo numerico che identifica il tipo di pagina mappato attraverso un array pubblico $tiposezione
+definito in conf/global.php che per ora &egrave;:
+<ul>
+<li>0 (generica): pagina generica: testo, foto e basta</li>
+<li>1 (episodio): scheda di un episodio con guest a destra, intestazione particolare</li>
+<li>2 riservata per uso futuro</li>
+<li>3 (classe): classe di astronavi</li>
+<li>4 (news): pagina della news</li>
+<li>5 (personaggio): pagina dei personaggi; prevede gli assegnamenti ed elenca gli episodi in cui compare</li>
+<li>6 (quantevolte): quante volte, deve prevedere un titolo con la conta degli item e un eventuale classifica</li>
+<li>7 (cast): cast regolare di una serie</li>
+<li>8 (recurring): personaggi ricorrenti</li>
+<li>9 (tabellariass): tabella riassuntiva degli episodi</li>
+<li>10 (libro): scheda di un libro, non pu&ograve; essere uguale a quella dell'episodio per via della foto al posto del cast</li>
+<li>11 (timeline): scheda della timeline</li>
+<li>12 (attore): scheda di un attore, si va a cercare da sola l'elenco degli episodi</li>
+<li>13 (astronave): astronave</li>
+<li>14 (astrospecie): 'padre' delle astronavi di una specie, serve per creare la gerarchia degli indici</li>
+<li>15 (statistiche): pagina speciale delle statistiche</li>
+</ul>
+<p>Manca comunque della roba, che verr&agrave; codificata, se necessario, in seguito.
+</p>
+
+<h2>episodicampi</h2>
+<p>Dati descrittivi dei campi degli episodi e definizione del loro ordine di visualizzazione.</p>
+
+<h2>episodivalori</h2>
+<p>Dati tabellari (quelli diversi dai guest che in HT compaiono prima del riassunto) veri e propri degli episodi.<br>
+Legati tramite idpagina alla tabella delle pagine. La parte descrittiva del campo &egrave; definita nella tabella episodicampi.</p>
+
+<h2>guest</h2>
+<p>Tabella di link tra le pagine, il cast e i personaggi. Da vedere come risolvere gli attori protagonisti.</p>
+
+<h2>capitolitipi</h2>
+<p>Definizione delle caratteristiche di presentazione dei capitoli.</p>
+
+<h2>capitoli</h2>
+<p>Testi che sono preceduti da un'intestazione.<br>
+Manca la possibilit&agrave; di associare una o pi&ugrave; immagini, deve essere prevista.</p>
+
+<h2>testi</h2>
+<p>Testo 'normale' di una scheda, separato dalla tabella <i>capitoli</i> per evitare di fare una tabella troppo
+grossa.<br>
+Manca la possibilit&agrave; di associare una o pi&ugrave; immagini, deve essere prevista.</p>
+
+<h2>immaginipagine</h2>
+<p>Tabella di raccordo molti-molti per capire in quali pagine va un'immagine.<br>
+
+<h2>piepagina</h2>
+<p>Testi che devono essere mostrati a pi&eacute; di pagina.</p>
+
+<h2>tabelle</h2>
+<p>Dati delle tabelle a due o a tre colonne per vario utilizzo. Il campo </i>istitolo</i> serve ad itentificare i titoli a cavallo delle colonne 
+usato nella timeline.</p>
+
+<h2>quantevolte</h2>
+<p>Elenco dei campi per le schede omonime, &egrave; previsto un campo su cui fare somme e classifiche. Se il campo <i>oggetto</i> della pagina &egrave; uno, la scheda ha una classifica</p>
+
+<h2>riferimenti</h2>
+<p>Elenco dei riferimenti ad altre pagine. Se la pagina A referenzia la pagina B e la pagina B referenzia la pagina A, ci 
+devono essere due record di questa tabella, non esiste referenziazione inversa implicita. Se ci&ograve; non &egrave; 
+elegante dal punto di vista della struttura del database, risulta per ora pi&ugrave; pratico in fase di visualizzazione.<br>
+Il campo <i>hardcoded></i> indica il tipo di azione necessaria per elaborare il link: se vale zero il campo 
+<i>riferimento</i> deve essere filtrato dalla funzione <b>espandiLink</b> prima di essere visualizzato, se vale uno il 
+campo deve essere visualizzato cos&igrave; com'&egrave;.</p>
+
+<h2>topmenu</h2>
+<p>Contenuto del menu superiore con la barra di navigazione</p>
+
+<h2>analitico</h2>
+<p>Chiavi dell'indice analitico</p>
+
+
+
+
+<h1>Algoritmi</h1>
+<h2>Struttura delle directory</h2>
+<p>La directory root di NG contiene il file INDEX.PHP (l'unico file richiamato dagli utenti) e una serie di subdir:
+<ul><li><b>conf</b> con i file php di configurazione</li>
+<li><b>icone</b> con le icone utilizzate dall'interfaccia</li>
+<li><b>immagini</b> con le immagini usate da NG organizzate in subdir, una per ogni sezione</li>
+<li><b>include</b> con gli include file che contengono la procedura vera e propria</li>
+<li><b>style</b> con i fogli stile
+</ul>
+
+<h2>index.php</h2>
+<p>File principale di NG, se richiamato senza parametri carica la pagina di default. &Egrave; l'unica pagina 
+che pu&ograve; essere richiamata dal browser, gli altri file rispondono picche (anzi, non rispondono proprio nulla per ora).<br>
+La pagina da caricare viene indicata in vari modi:
+<ol>
+<li>http://..../index.php/dsn001</li>
+<li>http://..../index.php/dsn/dsn001.html</li>
+<li>http://..../index.php/?tag=dsn001</li>
+<li>http://..../index.php/dsn-dsn-001?ndx=47</li>
+</ol>
+La (1) &egrave; il modo standard di referenziare le pagine in NG, la (4) il modo standard con la definizione della pagina di indice da mostrare, 
+usata prevalentemente durante la navigazione all'interno di NG. La (3) viene comunque supportata (con o senza variabile ndx), ma non &egrave;
+usata all'interno di NG. La (2) serve per permettere di convertire agevolmente i link esterni che referenziano HT senza troppe difficolta' e 
+per il file goto.html, che verr&agrave; riscritto quando NG andr&agrave; online.<br>
+La procedura PHP dentro il file passa il tag specificato nell'URL alla funzione di creazione di una nuova istanza
+di un oggetto pagina.<br>
+</p>
+
+<h2>conf/global.php</h2>
+<p>Contiene la definizione delle variabili globali utilizzate dalla procedura. Qui ci vanno solamente delle variabili, nient'altro.</p>
+
+<h2>conf/database.php</h2>
+<p>Chiamate alle procedure di apertura della connessione con il database server. In qualche punto del futuro la gestione
+dell'interfaccia con il database potrebbe essere sostituita con i PDO.</p>
+
+<h2>include/output.php</h2>
+<p>Definizione della classe <b>pagina</b>, che utilizza i seguenti metodi (molti dei quali privati):
+<ul> 
+<li><b>costruttore</b>: inizializza le veriabili e gli header HTML. Decide se il tag e' un ID numerico o un tag alfabetico e si comporta di conseguenza</li>
+<li><b>aggiungiHeader</b>: aggiunge un header HTML</li>
+<li><b>aggiungiMeta</b>: aggiunge un MetaTag HTML</li>
+<li><b>aggiungiRiferimento</b>: aggiunge un riferimento alla colonna di destra</li>
+<li><b>scrivi</b>: funzione principale di output, costruisce la gabbia di tabelle della pagina e la riempie richiamando le varia funzioni in realzione al tipo di dati da visualzizare</li>
+<li><b>scriviHead</b>: scrive il container HEAD e il suo contenuto</li>
+<li><b>scriviTopmenu</b>: scrive il manu superiore con la barra di navigazione</li>
+<li><b>scriviTitolo</b>: scrive il titolo della pagina con i gadget di navigazione, le icone...</li>
+<li><b>scriviDatiEpisodio</b>: crea una tabella con due celle all'interno delle quali ci sono due tabelle:
+i dati dell'episoido e gli attori ospiti</li>
+<li><b>scriviImmagini</b>: visualizza le immagini, la posizione &egrave; specificata da un parametro.</li>
+<li><b>scriviCapitoli</b>: scrive le parti di testo con intestazione (47, yati, note...)</li>
+<li><b>scriviTesti</b>: scrive le parti di testo senza intestazione</li>
+<li><b>scriviRiferimenti</b>: popola la colonna destra dei riferimenti</li>
+<li><b>scriviPiede</b>: scrive la fine della pagina: ultima modifica, rettangolini...</li>
+<li><b>scriviIndice</b>: popola la colonna sinistra dell'indice</li>
+<li><b>scriviApparizioniCast</b>: popola tabelle delle apparizioni del cast</li>
+<li><b>calacolaApparizioniPersonagio</b>: cerca le apparizioni di un personaggio e le aggiunge ai riferimenti</li>
+<li><b>espandiLink</b>: converte i link { | } in link HTML. Verr&agrave; ampliata per supportare anche la classe del link.</li>
+<li><b>costruisciURL(tag, anchor)</b>: costruisce un URL da usare in un campo A HREF tenendo conto di tutte le impostazioni.
+Il secondo parametro &egrave; facoltativo. &Egrave; l'unica funzione che deve essere usata per generare il contenuto
+di A HREF.</li>
+<li><b>costruisciURLimmagine(file, descrizione)</b>: costruisce la parte iniziale del tag IMG tenendo conto di tutte le
+impostazioni. Se il primo carattere del file dell'immagine &egrave; un '/' viene ignorato il path di default delle immagini.
+&Egrave; l'unica funzione che deve essere usata per generare il tag delle immagini.</li>
+
+</ul>
+</p> 
+
+<h2>include/funzioni.php</h2>
+<p>Funzioni utilizzate in varie parti della procedura:
+<ul>
+<li><b>readsetup/writesetup</b>: leggono/scrivono valori di setup</li>
+</ul>
+</p>
+
+<h1>Conversione</h1>
+<h2>Vecchi file</h2>
+<p>Per un (bel) po' di tempo rimarranno al posto dei vecchi file dei file che ridirigeranno il browser sul nuovo URL. Questi
+file verranno creati algoritmicamente once and for all prima di fare la conversione definitiva.<br>
+Domanda: esiste il modo per far tornare un codice HTTP 301 ('moved permanently') semplicemente mettendo un header in un
+file HTML, non PHP?</p>
+
+<h1>Gabbia della pagina</h1>
+<p>La gabbia attuale della pagina &egrave;:</p>
+	<table border="1" cellpadding="4" cellspacing="4" width="100%">
+		<tr>
+			<td colspan="3" align="center">icone delle sezioni</td>
+		</tr>
+		<tr>
+			<td rowspan="3" valign="top" width="25%">indice</td>
+			<td colspan="2">titolo</td>
+		</tr>
+		<tr>
+			<td rowspan="2">dati<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			</td>
+			<td align="center" valign="top" width="20%">riferimenti</td>
+		</tr>
+		<tr>
+			<td valign="bottom" width="20%">motd</td>
+		</tr>
+	</table>
+<p>Le proporzioni non sono quelle originali.</p>
+
+<hr>
+<p align="right">Questo documento &egrave; scritto con <a href="http://www.vim.org">vi (improved)</a>, abbiate pazienza.</p>
+</body>
+</html>
