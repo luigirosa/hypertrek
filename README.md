@@ -1,8 +1,14 @@
+#Per chi ha fretta
+- Scariare il repository
+- Creare due database su MySQL o MariaDB
+- Caricare nei database i due dump presenti nei file TGZ
+- Creare un utente e dargli il permesso di Select sul primo database e Select, Insert, Update, Delete sul secondo
+- Rinominare i due file .ini.distrib in .ini e inserire i dati del database: nei file .ini della dir principale inserire l'URL del sito
+- Proteggere, spostare o cancellare la directory **admin** (vedi sotto)
+
 #Sorgenti e dati di hypertrek.info
 
-La pubblicazione dei sorgenti e dei dati di HyperTrek non è una mera copia di file su GitHub, ma passa per una ripulitura del codice per rendere l'installazione di HyperTrek replicabile o analizzabile facilmente.
-
-Il codice originale è stato scritto molti anni fa, sove possibile e se il tempo l'ha permesso sono state apportate migliorie.
+Il codice originale è stato scritto molti anni fa, dove possibile e se il tempo l'ha permesso sono state apportate migliorie.
 
 La versione pubblicata su GitHub è la 3.0.0. Da qui eventuali nuove versioni seguiranno la filosofia del [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery).
 
