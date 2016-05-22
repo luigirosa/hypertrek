@@ -29,7 +29,7 @@
  * 20111105: tolto il DTD dal setup e reso costante
  * 20120818: il sitemap viene creato autonomamente dal motore
  * 20151225: supporto https e baseurl
- * 20160522: GitHub
+ * 20160522: GitHub, alcuni parametri di configurazione vengono trasferiti in setup.ini
  *
  */
 
@@ -43,6 +43,19 @@ if(!defined('HYPERTREK')) {
  * @global array $Setup parametri di configurazione della procedura di visualizzazione
  *
  */
+ 
+// leggo alcuni parametri da setup.ini
+$a = parse_ini_file('setup.ini', true);
+$Setup['db_ro_host']     = $a['sql']['host1'];       // host db readonly
+$Setup['db_ro_user']     = $a['sql']['user1'];       // utente db readonly
+$Setup['db_ro_pass']     = $a['sql']['password1'];   // password db readonly
+$Setup['db_ro_database'] = $a['sql']['database1'];   // database readonly
+$Setup['db_rw_host']     = $a['sql']['host2'];       // host db readwrite
+$Setup['db_rw_user']     = $a['sql']['user2'];       // utente db readwrite
+$Setup['db_rw_pass']     = $a['sql']['password2'];   // password db readwrite
+$Setup['db_rw_database'] = $a['sql']['database2'];   // database v
+
+// e gli altri sono hardcoded
 $Setup['versione']        = '3.0.0';                  // versione del software
 $Setup['idpaginadefault'] = 10;                       // id della pagina di default
 $Setup['favicon']         = '/static/favicon.ico';    // posizione della favicon

@@ -24,3 +24,9 @@ La struttura è tale che anche una SQL injection a causa di un errore di programm
 
 La sicurezza del sistema di coontribuzione, che **non** risiede sul serve di pubblicazione è garantita da una access list del server http. Il server MySQL consente l'accesso ad **utente2** solamente dall'IP del sistema di contribuzione.
 
+#admin
+La cartella admin contiene il sistema di editing del sito. 
+
+**La protezione dell'admin deve essere fatta con metdi esterni** come le access list del server http. Il sistema di contribuzione non ha una gestione utenti.
+
+

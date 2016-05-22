@@ -8,3 +8,5 @@ database2 = devhypertrek2
 user2 = hypertrek
 password2 = trekhyper
 
+[setup]
+baseurl = "https://hypertrek.info"

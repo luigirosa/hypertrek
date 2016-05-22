@@ -376,7 +376,7 @@ class ht_pagina {
 				   </style>
 				   <script type="text/javascript">
 				   var GOOG_FIXURL_LANG = \'it\';
-				   var GOOG_FIXURL_SITE = \'https://hypertrek.info/\';
+				   var GOOG_FIXURL_SITE = \'' . $this->aSetup['baseurl'] . '/\';
 				   </script>
 				   <script type="text/javascript" src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>';
 			break;
@@ -448,13 +448,13 @@ class ht_pagina {
 		echo "\n<meta property='og:locale' content='it_IT' />";
 		echo "\n<meta property='fb:admins' content='hypertrek' />";
 		echo "\n<meta property='og:image' content='http://ng.hypertrek.info/skin/standard/menu.png' />";
-		echo "\n<meta property=\"og:url\" content=\"https://hypertrek.info/index.php/". $this->aPagina['tag'] . "\" />";
+		echo "\n<meta property=\"og:url\" content=\"" . $this->aSetup['baseurl'] . "/index.php/". $this->aPagina['tag'] . "\" />";
 		echo "\n<meta http-equiv='Content-Type' content='text/html; charset=" . $this->aSetup['charset'] . "' />";
 		echo "\n<meta http-equiv='x-dns-prefetch-control' content='off' />";
 		echo "\n<meta name='generator' content='HyperTrek:NG Content Engine v" . $this->aSetup['versione'] . " by Luigi Rosa' />";
-		echo "\n<link rel=\"meta\" href=\"https://hypertrek.info/labels.rdf\" type=\"application/rdf+xml\" title=\"ICRA labels\" />";
-		echo "\n<meta http-equiv=\"pics-Label\" content='(pics-1.1 \"http://www.icra.org/pics/vocabularyv03/\" l gen true for \"https://hypertrek.info\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0)  gen true for \"https://hypertrek.info\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0) gen true for \"https://hypertrek.ifo\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0)  gen true for \"https://hypertrek.info\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0))' />";
-		echo "\n<link rel='alternate' title='HyperTrek: ultime modifiche' href='https://hypertrek.info/" . $this->aSetup['rsslast'] . "' type='application/rss+xml' />";
+		echo "\n<link rel=\"meta\" href=\"" . $this->aSetup['baseurl'] . "/labels.rdf\" type=\"application/rdf+xml\" title=\"ICRA labels\" />";
+		echo "\n<meta http-equiv=\"pics-Label\" content='(pics-1.1 \"http://www.icra.org/pics/vocabularyv03/\" l gen true for \"" . $this->aSetup['baseurl'] . "\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0)  gen true for \"https://hypertrek.info\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0) gen true for \"https://hypertrek.ifo\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0)  gen true for \"https://hypertrek.info\" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0))' />";
+		echo "\n<link rel='alternate' title='HyperTrek: ultime modifiche' href='" . $this->aSetup['baseurl'] . "/" . $this->aSetup['rsslast'] . "' type='application/rss+xml' />";
 		//funzioni AJAX
 		$this->ajax->printJavascript('/');
 		echo "<script type='text/javascript'>
@@ -2048,7 +2048,7 @@ class ht_pagina {
 			$buf .= "<channel>\n";
 			$buf .= "<title>HyperTrek: ultimi aggiornamenti</title>\n";
 			$buf .= "<description>Elenco delle pagine aggiornate negli ultimi " . $this->aSetup['giornilast']/86400 . " giorni</description>\n";
-			$buf .= "<link>https://hypertrek.info</link>\n";
+			$buf .= "<link>" . $this->aSetup['baseurl'] . "</link>\n";
 			$buf .= "<language>it-it</language>\n";
 			$buf .= "<pubDate>" . date('r') . "</pubDate>\n";
 			$buf .= "<lastBuildDate>" . date('r') . "</lastBuildDate>\n";
@@ -2061,8 +2061,8 @@ class ht_pagina {
 				$buf .= " <title>" . strip_tags($rd['titolo']) . "</title>\n";
 				$buf .= " <description>" . strip_tags($rd['titolo']) . "</description>\n";
 				$buf .= " <category>" . $rd['riferimento'] . "</category>\n";
-				$buf .= " <link>https://hypertrek.info/index.php/$rd[tag]</link>\n";
-				$buf .= " <guid>https://hypertrek.info/index.php/$rd[tag]</guid>\n";
+				$buf .= " <link>" . $this->aSetup['baseurl'] . "/index.php/$rd[tag]</link>\n";
+				$buf .= " <guid>" . $this->aSetup['baseurl'] . "/index.php/$rd[tag]</guid>\n";
 				$buf .= " <pubDate>" . date('r', $rd['lastmod']) . "</pubDate>\n";
 				$buf .= "</item>\n";
 			}
