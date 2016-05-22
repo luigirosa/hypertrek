@@ -154,6 +154,7 @@ class ht_pagina {
 	 * 20111105: adattati i tag alle specifiche XHTML
 	 * 20111105: corretto tag chiusura TD blocconavigazione
 	 * 20151225: supporto https
+	 * 20160522: GitHub
  	 * 
 	 */
 	function scrivi() {
@@ -240,7 +241,7 @@ class ht_pagina {
 		// colonna di sinistra degli indici
 		echo "\n<td width='16%' valign='top' align='left' class='bloccoindice'>";
 		// dima per evitare che collassi la tabella
-		echo "\n<img src='/dima.gif' border='0' align='left' alt='' />";
+		echo "\n<img src='/static/dima.gif' border='0' align='left' alt='' />";
 		echo "\n<div id='indiceintestazione'>";
 		echo HT_menu('', $_SESSION['ndx'], 'titolo');
 		echo "\n</div>"; // indiceintestazione
