@@ -1,5 +1,5 @@
 #Per chi ha fretta
-- Scariare il repository
+- Scaricare il repository
 - Creare due database su MySQL o MariaDB
 - Caricare nei database i due dump presenti nei file TGZ
 - Creare un utente e dargli il permesso di Select sul primo database e Select, Insert, Update, Delete sul secondo
@@ -17,7 +17,7 @@ La struttura originale del sito non era fatta per essere replicata facilmente.
 
 La parte amministrativa di editing dei contenuti gira su un computer diverso (tipicamente quello di casa di Luigi Rosa) dal server su cui gira il sito.
 
-Sul server ci sono due databae MySQL, **db1** (contenuti del sito) e **db2** (statistiche, log errori) e due utenti configurati **utente1** (utente utilizzato dal motore di visualizzaizone) e **utente2** (utente utilizzato dal sistema di contribuzione) con questi privilegi:
+Sul server ci sono due database MySQL, **db1** (contenuti del sito) e **db2** (statistiche, log errori) e due utenti configurati **utente1** (utente utilizzato dal motore di visualizzaizone) e **utente2** (utente utilizzato dal sistema di contribuzione) con questi privilegi:
 
 |             | **db1**      | **db2**   |
 | ----------- |:------------:|:---------:|
@@ -28,11 +28,11 @@ Non sono necessari altri privilegi sulle tabelle.
 
 La struttura è tale che anche una SQL injection a causa di un errore di programmazione può al massimo danneggiare dati statistici, ma non può alterare il contenuto delle pagine.
 
-La sicurezza del sistema di coontribuzione, che **non** risiede sul serve di pubblicazione è garantita da una access list del server http. Il server MySQL consente l'accesso ad **utente2** solamente dall'IP del sistema di contribuzione.
+La sicurezza del sistema di contribuzione, che **non** risiede sul serve di pubblicazione è garantita da una access list del server http. Il server MySQL consente l'accesso ad **utente2** solamente dall'IP del sistema di contribuzione.
 
 #admin
 La cartella admin contiene il sistema di editing del sito. 
 
-**La protezione dell'admin deve essere fatta con metdi esterni** come le access list del server http. Il sistema di contribuzione non ha una gestione utenti.
+**La protezione dell'admin deve essere fatta con metodi esterni** come le access list del server http. Il sistema di contribuzione non ha una gestione utenti.
 
 
