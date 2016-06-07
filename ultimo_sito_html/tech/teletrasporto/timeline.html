@@ -1,0 +1,389 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="it">
+<!--rxRWR Timeline del teletrasporto-->
+<head>
+<meta http-equiv="pics-label" content="(pics-1.1 &quot;http://www.icra.org/ratingsv02.html&quot; l gen true for &quot;http://www.hypertrek.info/&quot; r (cz 1 lz 1 nz 1 oz 1 vj 1) &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true for &quot;http://www.hypertrek.info/&quot; r (n 0 s 0 v 1 l 0))">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>HyperTrek * Sezione Tecnica * Teletrasporto * Timeline</title>
+<link rel="STYLESHEET" href="../../style/tech.css" type="text/css">
+<base target="main">
+</head>
+
+<body>
+
+<table border="0" width="100%" class="titolo">
+  <tr>
+          <td width="52"><a target="nav" href="../index.html"><img src="../../skin/tech.gif" alt="Sezione tecnica" border="0" width="52" height="42"></a></td>
+ <td>
+    <h1>Teletrasporto - Timeline</h1>
+    </td>
+  </tr>
+</table>
+    <table border="0" class="xr" align="right" cellspacing="0" cellpadding="3">
+      <tr>
+        <td class="xrdettaglio"><a href="#note">Note</a></td>
+      </tr>
+    </table>
+<p>Questa è la sequenza tipica delle operazioni di teletrasporto relative allo 
+sbarco di personale, ci potrebbero essere delle variazioni minime in relazione 
+alla massa da teletrasportare. Per descrivere la parte del complesso del 
+teletrasporto che esegue l'operazione vengono usate le seguenti abbreviazioni:</p>
+<table border="0" class="standard">
+  <tr>
+    <td><b>BPR</b></td>
+    <td>Bobine primarie</td>
+  </tr>
+  <tr>
+    <td><b>BTF</b></td>
+    <td>Bobine di transizione di fase</td>
+  </tr>
+  <tr>
+    <td><b>CDC</b></td>
+    <td>Computer di controllo del teletrasporto</td>
+  </tr>
+  <tr>
+    <td><b>CON</b></td>
+    <td>Console</td>
+  </tr>
+  <tr>
+    <td><b>EME</b></td>
+    <td>Emettitore</td>
+  </tr>
+  <tr>
+    <td><b>PBF</b></td>
+    <td>Pattern buffer</td>
+  </tr>
+  <tr>
+    <td><b>SAD</b></td>
+    <td>Scanner per l'analisi del luogo di destinazione</td>
+  </tr>
+  <tr>
+    <td><b>SCM</b></td>
+    <td>Scanner molecolare</td>
+  </tr>
+</table>
+<table border="1" cellpadding="2" width="100%" class="tabella">
+  <tr>
+    <td>00.000</td>
+    <td><b>CON</b></td>
+    <td>Inizializzazione e avvio delle procedure automatiche.</td>
+  </tr>
+  <tr>
+    <td>00.001</td>
+    <td><b>CDC</b></td>
+    <td>Inizio delle procedure di autodiagnosi.</td>
+  </tr>
+  <tr>
+    <td>00.007</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dei canali di trasmissione del segnale, della disponibilità di 
+    un pattern buffer principale e di uno di riserva.</td>
+  </tr>
+  <tr>
+    <td>00.046</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'efficienza dei computer di controllo.</td>
+  </tr>
+  <tr>
+    <td>00.057</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'efficienza degli scanner per l'analisi della destinazione 
+    e per la compensazione Doppler.</td>
+  </tr>
+  <tr>
+    <td>00.063</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'efficienza del pattern buffer.</td>
+  </tr>
+  <tr>
+    <td>00.072</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'efficienza del pattern buffer di riserva.</td>
+  </tr>
+  <tr>
+    <td>00.085</td>
+    <td><b>PBF</b></td>
+    <td>Inizializzazione del pattern buffer principale e di quello di riserva.</td>
+  </tr>
+  <tr>
+    <td>00.097</td>
+    <td><b>CDC</b></td>
+    <td>Verifica delle bobine di transizione di fase.</td>
+  </tr>
+  <tr>
+    <td>00.102</td>
+    <td><b>BTF</b></td>
+    <td>Attivazione del segnale di riferimento.</td>
+  </tr>
+  <tr>
+    <td>00.118</td>
+    <td><b>CON</b></td>
+    <td>Verifica dell'assegnamento dell'emettitore.</td>
+  </tr>
+  <tr>
+    <td>00.121</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'emettitore e dei sistemi di trasmissione.</td>
+  </tr>
+  <tr>
+    <td>00.138</td>
+    <td><b>CDC</b></td>
+    <td>Verifica degli scanner molecolari e dei compensatori Heisenberg.</td>
+  </tr>
+  <tr>
+    <td>00.140</td>
+    <td><b>SAD</b></td>
+    <td>Analisi ambientali del luogo indicato dalle coordinate di sbarco.</td>
+  </tr>
+  <tr>
+    <td>00.142</td>
+    <td><b>CON</b></td>
+    <td>I pannelli indicano che il sistema è pronto.</td>
+  </tr>
+  <tr>
+    <td>00.145</td>
+    <td><b>BPR</b></td>
+    <td>Inizio della trasmissione dell'ACB nella sala di trasporto.</td>
+  </tr>
+  <tr>
+    <td>00.145</td>
+    <td><b>BTF</b></td>
+    <td>Livello di energia portato a 1.7 MeV, frequenza iniziale impostata a 
+    10.2 GHz.</td>
+  </tr>
+  <tr>
+    <td>00.236</td>
+    <td><b>PBF</b></td>
+    <td>Il tokamak raggiunge capacità operativa.</td>
+  </tr>
+  <tr>
+    <td>00.259</td>
+    <td><b>EME</b></td>
+    <td>Gli elementi emettitori raggiungono 1.7 MeV.</td>
+  </tr>
+  <tr>
+    <td>00.327</td>
+    <td><b>PBF</b></td>
+    <td>Sincronizzazione con le bobine di transizione di fase.</td>
+  </tr>
+  <tr>
+    <td>00.332</td>
+    <td><b>SCM</b></td>
+    <td>Reset degli scanner.</td>
+  </tr>
+  <tr>
+    <td>00.337</td>
+    <td><b>SCM</b></td>
+    <td>Attivazione della risoluzione quantica per il trasporto di forme di 
+    vita.</td>
+  </tr>
+  <tr>
+    <td>00.338</td>
+    <td><b>BPR</b></td>
+    <td>ACB portato a 12.5 MeV.</td>
+  </tr>
+  <tr>
+    <td>00.341</td>
+    <td><b>CON</b></td>
+    <td>Il pannello indica l'inizio della fase di emissione di energia. Questo 
+    processo può essere controllato manualmente a discrezione dell'operatore.</td>
+  </tr>
+  <tr>
+    <td>00.359</td>
+    <td><b>SCM</b></td>
+    <td>Inizio della fase di scansione. Locking del raggio di riferimento.</td>
+  </tr>
+  <tr>
+    <td>00.363</td>
+    <td><b>BPR</b></td>
+    <td>Locking della modulazione dell'ACB.</td>
+  </tr>
+  <tr>
+    <td>00.417</td>
+    <td><b>BTF</b></td>
+    <td>Inizio del ramp-up a 162.9 GHz, emissione di energia a 32 MeV.</td>
+  </tr>
+  <tr>
+    <td>00.432</td>
+    <td><b>SCM</b></td>
+    <td>Inizio della trasmissione dei dati analogici dell'immagine al pattern 
+    buffer.</td>
+  </tr>
+  <tr>
+    <td>00.464</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'integrità dei dati immagine.</td>
+  </tr>
+  <tr>
+    <td>00.523</td>
+    <td><b>PBF</b></td>
+    <td>Sincronizzazione della frequenza con le bobine di transizione di fase.</td>
+  </tr>
+  <tr>
+    <td>00.596</td>
+    <td><b>BTF</b></td>
+    <td>Locking della frequenza a 162.9 GHz. Inizio del ciclo di 
+    smaterializzazione.</td>
+  </tr>
+  <tr>
+    <td>00.601</td>
+    <td><b>CDC</b></td>
+    <td>Registrazione dell'attività del teletrasporto sull'apposito log storico.</td>
+  </tr>
+  <tr>
+    <td>00.998</td>
+    <td><b>PBF</b></td>
+    <td>Inizio del ricevimento del flusso di materia.</td>
+  </tr>
+  <tr>
+    <td>01.027</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'integrità del flusso di materia.</td>
+  </tr>
+  <tr>
+    <td>01.105</td>
+    <td><b>BTF</b></td>
+    <td>Energia di uscita aumentata a 37 MeV.</td>
+  </tr>
+  <tr>
+    <td>01.132</td>
+    <td><b>EME</b></td>
+    <td>ACB a 1.9 MeV. Locking del raggio di riferimento di fase.</td>
+  </tr>
+  <tr>
+    <td>01.190</td>
+    <td><b>SAD</b></td>
+    <td>Verifica delle coordinate di destinazione, della distanza e della 
+    velocità relativa.</td>
+  </tr>
+  <tr>
+    <td>01.204</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'integrità del pattern buffer. Opzione di commutare sul 
+    pattern buffer di riserva oppure di annullare l'operazione.</td>
+  </tr>
+  <tr>
+    <td>01.216</td>
+    <td><b>SAD</b></td>
+    <td>Locking sul luogo di destinazione. Inizio dello scan continuo sulle 
+    coordinate del luogo di destinazione.</td>
+  </tr>
+  <tr>
+    <td>01.221</td>
+    <td><b>EME</b></td>
+    <td>Inizio della trasmissione dell'ACB sulle coordinate di destinazione.</td>
+  </tr>
+  <tr>
+    <td>01.227</td>
+    <td><b>EME</b></td>
+    <td>Primo ricevimento del ritorno della riflessione del segnale dell'ACB; 
+    compensazione Doppler e sincronizzazione con il pattern buffer.</td>
+  </tr>
+  <tr>
+    <td>01.229</td>
+    <td><b>CDC</b></td>
+    <td>Determinazione delle eventuali correzioni in relazione al livello del 
+    suolo del luogo di destinazione.</td>
+  </tr>
+  <tr>
+    <td>01.230</td>
+    <td><b>EME</b></td>
+    <td>ACB a piena potenza.</td>
+  </tr>
+  <tr>
+    <td>01.237</td>
+    <td><b>PBF</b></td>
+    <td>Inizio della trasmissione del flusso di materia all'emettitore.</td>
+  </tr>
+  <tr>
+    <td>01.240</td>
+    <td><b>PBF</b></td>
+    <td>Inizio della trasmissione dei dati immagine attraverso l'ACB.</td>
+  </tr>
+  <tr>
+    <td>01.241</td>
+    <td><b>EME</b></td>
+    <td>Inizio della trasmissione del flusso di materia attraverso l'ACB. Inizio 
+    del ciclo di materializzazione.</td>
+  </tr>
+  <tr>
+    <td>02.419</td>
+    <td><b>CDC</b></td>
+    <td>Verifica e monitoraggio della sequenza di materializzazione. Opzione per 
+    annullare l'operazione e far ritornare il soggetto sulla piattaforma di 
+    trasporto.</td>
+  </tr>
+  <tr>
+    <td>02.748</td>
+    <td><b>BTF</b></td>
+    <td>Inizio del ramp-down a 25,1 GHz.</td>
+  </tr>
+  <tr>
+    <td>03.069</td>
+    <td><b>PBF</b></td>
+    <td>Raggiungimento del 50% del flusso di materia trasmesso. Annullamento 
+    della possibilità di rimaterializzare sulla piattaforma di partenza.</td>
+  </tr>
+  <tr>
+    <td>04.077</td>
+    <td><b>BPR</b></td>
+    <td>Ciclo di smaterializzazione completato. Mantenimento del livello di 
+    energia dell'ACB.</td>
+  </tr>
+  <tr>
+    <td>04.185</td>
+    <td><b>BTF</b></td>
+    <td>Attesa a 25,1 GHz.</td>
+  </tr>
+  <tr>
+    <td>04.823</td>
+    <td><b>EME</b></td>
+    <td>Ciclo di materializzazione completato.</td>
+  </tr>
+  <tr>
+    <td>04.824</td>
+    <td><b>CDC</b></td>
+    <td>Verifica dell'integrità del pattern.</td>
+  </tr>
+  <tr>
+    <td>04.947</td>
+    <td><b>BTF</b></td>
+    <td>Spegnimento e passaggio in standby.</td>
+  </tr>
+  <tr>
+    <td>04.949</td>
+    <td><b>BPR</b></td>
+    <td>Rilascio del locking dell'ACB.</td>
+  </tr>
+  <tr>
+    <td>04.951</td>
+    <td><b>PBF</b></td>
+    <td>Spegnimento e passaggio in standby.</td>
+  </tr>
+  <tr>
+    <td>04.973</td>
+    <td><b>EME</b></td>
+    <td>Rilascio del locking dell'ACB.</td>
+  </tr>
+  <tr>
+    <td>05.000</td>
+    <td><b>CON</b></td>
+    <td>Segnalazione del trasporto avvenuto con successo.</td>
+  </tr>
+</table>
+<h4><a name="note">Note</a></h4>
+<ul>
+  <li>La console di comando del teletrasporto di
+  <a target="nav" rel="contents" class="nav" href="../../tng/index.html"><i>The Next Generation</i></a> (a 
+  cui fa riferimento tutta questa documentazione) ha tre barre luminose 
+  sensibili al tocco che permettono all'ufficiale addetto di controllare la fase 
+  di (s)materializzazione; queste tre barre luminose sono l'eredità dei vecchi 
+  dispositivi di teletrasporto che avevano invece tre slider solidi.</li>
+</ul>
+<hr>
+<script language="JavaScript" type="text/javascript">document.write("<h6>Ultima modifica: ",document.lastModified,"<\/h6>")
+</script>
+
+</body>
+
+</html>

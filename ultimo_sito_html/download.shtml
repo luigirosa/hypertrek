@@ -1,0 +1,157 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="it">
+
+<head>
+<meta http-equiv="pics-label" content="(pics-1.1 &quot;http://www.icra.org/ratingsv02.html&quot; l gen true for &quot;http://www.hypertrek.info/&quot; r (cz 1 lz 1 nz 1 oz 1 vj 1) &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true for &quot;http://www.hypertrek.info/&quot; r (n 0 s 0 v 1 l 0))">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>HyperTrek * Download</title>
+<link rel="STYLESHEET" href="style/etc.css" type="text/css">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+</head>
+
+<body>
+
+<!--#config errmsg="N/D" -->
+<!--#config timefmt="%d.%m.%Y" -->
+<table border="0" bgcolor="#c0c0c0" width="100%">
+  <tr>  <td width="56" align="center">
+    <img border="0" src="skin/download-ico.gif" width="52" height="42" alt="Download"></td>
+    <td>
+    <h1>Download</h1>
+    </td>
+  </tr>
+</table>
+<p>In questa pagina viene spiegato come ricreare sul proprio computer una copia 
+di HyperTrek conforme con quella online. Prerequisiti:</p>
+<ul>
+  <li>File System che supporta i nomi lunghi, i nomi dei file di HyperTrek non 
+  contengono spazi e non usano lettere maiuscole.</li>
+  <li>Scompattatore ZIP oppure 
+  RAR (lo scompattatore RAR è disponibile <b>gratuitamente</b> 
+    per molte piattaforme su <a href="http://www.rarlab.com/" target="_blank">
+    www.rarlab.com</a>, inoltre molti programmi decomprimono i file RAR).</li>
+  <li>Una directory vuota, che diventerà la directory root di HyperTrek.</li>
+</ul>
+<p>È consigliabile installare anche il font TrueType <a href="files/aero.ttf">
+Aero</a>; alcune vecchie versioni di Netscape interpretano erroneamente questo file come 
+eseguibile, si tratta invece di un file TrueType con estensione TTF.</p>
+<p class="dl"><b>Ogni archivio contiene il path dei file riferito 
+alla root di HyperTrek, quindi ciascun file va scompattato dalla root di 
+HyperTrek.</b> Quando si installa una versione completa, è sempre meglio 
+cancellare la directory prima di scompattare l'archivio nuovo.</p>
+<table border="1" cellpadding="2" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" colspan="2" class="dl">Qual è il file giusto per me?</td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Se...</b></td>
+    <td width="50%"><b>Allora...</b></td>
+  </tr>
+  <tr>
+    <td width="50%">non hai nulla, hai una versione danneggiata o hai una 
+    versione di HyperTrek precedente il 18.9.2005</td>
+    <td width="50%">devi scaricare l'archivio completo.</td>
+  </tr>
+  <tr>
+    <td width="50%">hai una versione successiva il 18.9.2005 </td>
+    <td width="50%">devi scaricare il file d_all e scompattarlo sovrascrivendo i 
+    file esistenti.</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" cellpadding="3" cellspacing="3" width="100%">
+  <tr>
+    <td colspan="4" class="dl">HyperTrek, copia esatta del sito</td>
+  </tr>
+  <tr>
+    <th>Descrizione</th>
+    <th>File</th>
+    <th align="center">kByte</th>
+    <th>Data</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Questo archivio dovrebbe essere scaricato la prima volta che 
+    si installa HyperTrek o quando avete una versione troppo vecchia. </td>
+    <td align="center"><a href="files/hypertrek.rar">hypertrek.rar</a></td>
+    <td align="center"><!--#fsize virtual="/files/hypertrek.rar"--></td>
+    <td align="right"><!--#flastmod virtual="/files/hypertrek.rar"--></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="files/hypertrek.zip">hypertrek.zip</a></td>
+    <td align="center"><!--#fsize virtual="/files/hypertrek.zip"--></td>
+    <td align="right"><!--#flastmod virtual="/files/hypertrek.zip"--></td>
+  </tr>
+  <tr>
+    <td rowspan="2">File modificati dal 19.9.2005.</td>
+    <td align="center"><a href="files/d_all.rar">d_all.rar</a></td>
+    <td align="center"><!--#fsize virtual="/files/d_all.rar"--></td>
+    <td align="right"><!--#flastmod virtual="/files/d_all.rar"--></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="files/d_all.zip">d_all.zip</a></td>
+    <td align="center"><!--#fsize virtual="/files/d_all.zip"--></td>
+    <td align="right"><!--#flastmod virtual="/files/d_all.zip"--></td>
+  </tr>
+  </table>
+<p>&nbsp;</p>
+<table border="3" cellpadding="3" cellspacing="3" width="100%">
+  <tr>
+    <td colspan="4" class="dl">HyperTrek <i>no frills</i> senza immagini</td>
+  </tr>
+  <tr>
+    <th>Descrizione</th>
+    <th>File</th>
+    <th align="center">kByte</th>
+    <th>Data</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Questo archivio dovrebbe essere scaricato la prima volta che 
+    si installa HyperTrek o quando avete una versione troppo vecchia. </td>
+    <td align="center"><a href="files/hypertrek-nf.rar">hypertrek-nf.rar</a></td>
+    <td align="center"><!--#fsize virtual="/files/hypertrek-nf.rar"--></td>
+    <td align="right"><!--#flastmod virtual="/files/hypertrek-nf.rar"--></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="files/hypertrek-nf.zip">hypertrek-nf.zip</a></td>
+    <td align="center"><!--#fsize virtual="/files/hypertrek-nf.zip"--></td>
+    <td align="right"><!--#flastmod virtual="/files/hypertrek-nf.zip"--></td>
+  </tr>
+  <tr>
+    <td rowspan="2">File modificati dal 14.3.2005.</td>
+    <td align="center"><a href="files/d_all-nf.rar">d_all-nf.rar</a></td>
+    <td align="center"><!--#fsize virtual="/files/d_all-nf.rar"--></td>
+    <td align="right"><!--#flastmod virtual="/files/d_all-nf.rar"--></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="files/d_all-nf.zip">d_all-nf.zip</a></td>
+    <td align="center"><!--#fsize virtual="/files/d_all-nf.zip"--></td>
+    <td align="right"><!--#flastmod virtual="/files/d_all-nf.zip"--></td>
+  </tr>
+  </table>
+<p>&nbsp;</p>
+<table border="3" cellpadding="3" cellspacing="3" width="100%">
+  <tr>
+    <td colspan="2" class="dl">Vecchi file</td>
+  </tr>
+  <tr>
+    <th>Descrizione</th>
+    <th>File</th>
+  </tr>
+  <tr>
+    <td>L'ultima versione (maggio 1997) di WinTrekHelp, guida ipertestuale in 
+    formato Windows 3.x helpfile</td>
+    <td align="center"><a href="files/WinTrekHelp.zip">WinTrekHelp.zip</a></td>
+  </tr>
+  <tr>
+    <td>L'ultima versione (1990) del sorgente della Norton Guide di Star Trek 
+    che avevo fatto prima di WinTrekHelp</td>
+    <td align="center"><a href="files/trek_ng.zip">trek_ng.zip</a></td>
+  </tr>
+</table>
+<hr>
+<script language="JavaScript" type="text/javascript">document.write("<h6>Ultima modifica: ",document.lastModified,"<\/h6>")
+</script>
+
+</body>
+
+</html>

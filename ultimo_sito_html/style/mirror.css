@@ -1,0 +1,104 @@
+A:link {color: #008000; text-decoration: none}
+A:visited {color: #004000; text-decoration: none}
+A:active {color: #00C000; text-decoration: none}
+A:link:hover {color: #4000FF; text-decoration: none}
+A:link.esterno {color: #008000; text-decoration: none; background-color: #e0e0e0}
+A:hover.esterno {color: #008000; text-decoration: none; background-color: #FFFFCC}
+A:link.umbra {color: #008000; text-decoration: none; background-color: #e0e0e0}
+A:hover.umbra {color: #008000; text-decoration: none; background-color: #99CCFF}
+A:link.mailto {color: #008000; text-decoration: none; background-color: #e0e0e0}
+A:hover.mailto {color: #008000; text-decoration: none; background-color: #CCFFFF}
+A:link.news {color: #008000; text-decoration: none; background-color: #e0e0e0}
+A:hover.news {color: #008000; text-decoration: none; background-color: #FFCCFF}
+A:link.nav {color: #008000; text-decoration: none; background-color: #e0e0e0}
+A:hover.nav {color: #008000; text-decoration: none; background-color: #EEEEEE}
+
+ BODY {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 11pt;
+       font-style: normal;
+       text-align: left;
+       color: black;
+       background: #e0e0e0}
+
+ TABLE.standard {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 11pt;
+       font-style: normal;
+       text-align: left;
+       color: black;
+       background: #e0e0e0}
+
+ TABLE.tabella {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 10pt;
+       font-style: normal;
+       color: black;
+       background: #e0e0e0}
+
+ TABLE.titolo {
+       background: #909090}
+
+ TABLE.xr {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 8pt;
+       font-style: normal;
+       float: right;
+       text-align: center;
+       color: black;
+       margin-bottom: 0;
+       background: #c0c0c0}
+
+ TD.xrtestata{
+       font-size: 8pt;
+       font-weight: bold;
+       text-align: center;
+       color: #FF0000;
+       background: #c0c0c0}
+
+ TD.xrdettaglio{
+       font-weight: normal;
+       font-size: 8pt;
+       font-style: normal;
+       text-align: center;
+       background: #a0a0a0}
+
+ H1   {font-family: "Aero", "Helvetica", sans-serif;
+       font-weight: bold;
+       font-size: 18pt;
+       font-style: normal;
+       text-align: left;
+       line-height: normal;
+       margin-top: 0;
+       margin-bottom: 0;
+       vertical-align: middle;
+       color: black;
+       background: #909090}
+
+ H2   {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: bold;
+       font-size: 14pt;
+       font-style: italic;
+       text-align: center;
+       color: black;
+       background: #e0e0e0}
+
+ H4   {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: bold;
+       font-size: 14pt;
+       font-style: normal;
+       text-align: left;
+       color: black;
+       background: #c0c0c0}
+
+
+ H6   {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 8pt;
+       margin-top: 0;
+       margin-bottom: 0;
+       font-style: normal;
+       text-align: right;
+       vertical-align: middle;
+       color: black;
+       background: #e0e0e0}

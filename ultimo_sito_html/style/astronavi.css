@@ -1,0 +1,164 @@
+A:link {color: #008000; text-decoration: none}
+A:visited {color: #004000; text-decoration: none}
+A:active {color: #00C000; text-decoration: none}
+A:link:hover {color: #4000FF; text-decoration: none}
+A:link.esterno {color: #008000; text-decoration: none; background-color: white}
+A:hover.esterno {color: #008000; text-decoration: none; background-color: #FFFFCC}
+A:link.umbra {color: #008000; text-decoration: none; background-color: white}
+A:hover.umbra {color: #008000; text-decoration: none; background-color: #99CCFF}
+A:link.mailto {color: #008000; text-decoration: none; background-color: white}
+A:hover.mailto {color: #008000; text-decoration: none; background-color: #CCFFFF}
+A:link.news {color: #008000; text-decoration: none; background-color: white}
+A:hover.news {color: #008000; text-decoration: none; background-color: #FFCCFF}
+A:link.nav {color: #008000; text-decoration: none; background-color: white}
+A:hover.nav {color: #008000; text-decoration: none; background-color: #EEEEEE}
+
+ BODY {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 11pt;
+       font-style: normal;
+       text-align: left;
+       color: black;
+       background: white}
+
+ H1   {font-family: "Aero", "Helvetica", sans-serif;
+       font-weight: bold;
+       font-size: 18pt;
+       font-style: normal;
+       text-align: left;
+       line-height: normal;
+       margin-top: 0;
+       margin-bottom: 0;
+       vertical-align: middle;
+       color: black;
+       background: #c0c0c0}
+
+ H2   {font-family: "Times New Roman", "Times", serif;
+       font-weight: bold;
+       font-size: 24pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H2.e1701title   {font-family: "Times New Roman", "Times", serif;
+       font-weight: bold;
+       font-size: 24pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H2.e1701text   {font-family: "Times New Roman", "Times", serif;
+       font-weight: normal;
+       font-size: 22pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H3   {font-family: "Times New Roman", "Times", serif;
+       font-weight: normal;
+       font-size: 18pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H3.title   {font-family: "Times New Roman", "Times", serif;
+       font-weight: normal;
+       font-size: 14pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H3.cast   {font-family: "Times New Roman", "Times", serif;
+       font-weight: lighter;
+       font-size: 8pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H4   {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: bold;
+       font-size: 14pt;
+       font-style: normal;
+       text-align: left;
+       color: black;
+       background: #c0c0c0}
+
+ H4.titolo   {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: bold;
+       font-size: 14pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H6.exquote   {font-family: "Times New Roman", "Times", serif;
+       font-weight: normal;
+       font-size: 16pt;
+       font-style: normal;
+       text-align: center;
+       color: black;
+       background: white}
+
+ H6.quote   {font-family: "Times New Roman", "Times", serif;
+       font-weight: normal;
+       font-size: 12pt;
+       font-style: italic;
+       text-align: center;
+       color: black;
+       background: white}
+
+ TABLE.titolo {
+       background: #c0c0c0}
+ 
+ TABLE.plaque {background: white;
+       border-width: medium;
+       border-color: #c0c0c0;
+       border-style: outset}
+
+ TABLE.tabella {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 10pt;
+       font-style: normal;
+       color: black;
+       background: white}
+
+ TABLE.xr {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 8pt;
+       font-style: normal;
+       float: right;
+       text-align: center;
+       color: black;
+       margin-bottom: 0;
+       background: #c0c0c0}
+
+ TD.xrtestata{
+       font-size: 8pt;
+       font-weight: bold;
+       text-align: center;
+       color: #FF0000;
+       background: #e0e0e0}
+
+ TD.xrdettaglio{
+       font-weight: normal;
+       font-size: 8pt;
+       font-style: normal;
+       text-align: center;
+       background: #c0c0c0}
+
+ H6   {font-family: "Arial", "Helvetica", sans-serif;
+       font-weight: normal;
+       font-size: 8pt;
+       margin-top: 0;
+       margin-bottom: 0;
+       font-style: normal;
+       text-align: right;
+       vertical-align: middle;
+       color: black;
+       background: white}

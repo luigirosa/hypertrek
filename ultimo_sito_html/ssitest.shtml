@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <title>SSI Test</title>
+  <!-- ssitest.shtml -->
+  <LINK REL=STYLESHEET HREF="style/etc.css" TYPE="text/css">
+  <META HTTP-EQUIV="Reply-to" CONTENT="lrosa@venus.it (Luigi Rosa)">
+  <META name="description" content="SSI Test">
+  <LINK HREF="mailto:lrosa@venus.it" REV="Made">
+</head>
+<BODY BGCOLOR="#FFFFFF">
+
+<P><TABLE cellpadding=3 border=0 bgcolor="#c0c0c0" width="100%">
+<TR><TD align=left><H1>SSITEST</H1></TD></TR>
+</TABLE>
+
+<TABLE BORDER=3 CELLPADDING=3>
+<TR><TD>ACCEPT_LANGUAGE</TD><TD><!--#echo var="ACCEPT_LANGUAGE"--></TD></TR>
+<TR><TD>AUTH_NAME</TD><TD><!--#echo var="AUTH_NAME"--></TD></TR>
+<TR><TD>DATE_GMT</TD><TD><!--#echo var="DATE_GMT"--></TD></TR>
+<TR><TD>DATE_LOCAL</TD><TD><!--#echo var="DATE_LOCAL"--></TD></TR>
+<TR><TD>DOCUMENT_NAME</TD><TD><!--#echo var="DOCUMENT_NAME"--></TD></TR>
+<TR><TD>DOCUMENT_URI</TD><TD><!--#echo var="DOCUMENT_URI"--></TD></TR>
+<TR><TD>FROM</TD><TD><!--#echo var="FROM"--></TD></TR>
+<TR><TD>HTTP_ACCEPT</TD><TD><!--#echo var="HTTP_ACCEPT"--></TD></TR>
+<TR><TD>HTTP_COOKIE</TD><TD><!--#echo var="HTTP_COOKIE"--></TD></TR>
+<TR><TD>HTTP_USER_AGENT</TD><TD><!--#echo var="HTTP_USER_AGENT"--></TD></TR>
+<TR><TD>LAST_MODIFIED</TD><TD><!--#echo var="LAST_MODIFIED"--></TD></TR>
+<TR><TD>PRAGMA</TD><TD><!--#echo var="PRAGMA"--></TD></TR>
+<TR><TD>QUERY_STRING</TD><TD><!--#echo var="QUERY_STRING"--></TD></TR>
+<TR><TD>QUERY_STRING_UNESCAPED</TD><TD><!--#echo var="QUERY_STRING_UNESCAPED"--></TD></TR>
+<TR><TD>REFERER</TD><TD><!--#echo var="REFERER"--></TD></TR>
+<TR><TD>REMOTE_ADDR</TD><TD><!--#echo var="REMOTE_ADDR"--></TD></TR>
+<TR><TD>REMOTE_HOST</TD><TD><!--#echo var="REMOTE_HOST"--></TD></TR>
+<TR><TD>REMOTE_USER</TD><TD><!--#echo var="REMOTE_USER"--></TD></TR>
+<TR><TD>REQUEST_METHOD</TD><TD><!--#echo var="REQUEST_METHOD"--></TD></TR>
+<TR><TD>SERVER_NAME</TD><TD><!--#echo var="SERVER_NAME"--></TD></TR>
+<TR><TD>SERVER_PORT</TD><TD><!--#echo var="SERVER_PORT"--></TD></TR>
+<TR><TD>SERVER_PROTOCOL</TD><TD><!--#echo var="SERVER_PROTOCOL"--></TD></TR>
+<TR><TD>SERVER_SOFTWARE</TD><TD><!--#echo var="SERVER_SOFTWARE"--></TD></TR>
+<TR><TD></TD><TD><!--#echo var=""--></TD></TR>
+<TR><TD></TD><TD><!--#echo var=""--></TD></TR>
+<TR><TD></TD><TD><!--#echo var=""--></TD></TR>
+<TR><TD></TD><TD><!--#echo var=""--></TD></TR>
+<TR><TD></TD><TD><!--#echo var=""--></TD></TR>
+<TR><TD></TD><TD><!--#echo var=""--></TD></TR>
+
+</TABLE>
+
+
+
+</body>
+</html>

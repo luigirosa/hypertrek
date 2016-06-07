@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="it">
+
+<head>
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://www.hypertrek.info/" r (cz 1 lz 1 nz 1 oz 1 vj 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://www.hypertrek.info/" r (n 0 s 0 v 1 l 0))'>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>HyperTrek  * Data Stellare</title>
+<link rel="STYLESHEET" href="../style/etc.css" type="text/css">
+<base target="main">
+</head>
+
+<body>
+
+<script language="JavaScript" src="../files/data.js" type="text/javascript"></script>
+
+<table border="0" width="100%" class="titolo">
+  <tr><td width="52"><a target="nav" href="index.html"><img src="../skin/etc.gif" alt="Varie" border="0" width="52" height="42"></a></td>
+    <td>
+      <h1>Data Stellare</h1>
+    </td>
+  </tr>
+</table>
+<p>Per vari motivi, la data stellare nell'universo Trek viene interpretata in
+maniere differenti ed è difficile stabilire un metodo univoco e 
+<a href="terminologia.html#canon">canonico</a>
+per trasformare la data stellare nell'attuale sistema di computo del tempo. Di
+seguito vengono riportati alcuni metodi o interpretazioni, resta il fatto che
+nessuno di questi è <a href="terminologia.html#canon">canonico</a>.<br>
+L'unico sistema <a href="terminologia.html#canon">canonico</a> consiste nel rifarsi alle tabelle cronologiche
+di <a href="../xr/o/okuda.html">Okuda</a> pubblicate nella <i> <a href="../libri/saggi/chronology.html">Star
+Trek Chronology</a></i> e alle pubblicazioni simili, anche se alcuni eventi 
+potrebbero avere datazioni controverse.</p>
+<p>La <b>FASA Corporation</b> adotta un sistema di datazione chiamato «reference
+stardate» che ha il formato <b>X/YYYY.ZZ</b>, dove X è un numero
+(eventualmente preceduto da un segno negativo) che identifica il secolo
+(0=2000-2099 <i>d.C.</i>); YYYY è costituito dalle ultime due cifre dell'anno e
+dal numero del mese; ZZ è il numero progressivo del giorno del mese.<br>
+Quindi 0/0001.1 è il 01/01/2000 e -1/6707.26 è il 26/07/67.</p>
+<p>In <i><a target="nav" class="nav" href="../tng/index.html">The Next Generation</a></i> e nelle successive produzioni la data stellare
+viene interpretata in maniera differente rispetto alla 
+<a target="nav" href="../tos/index.html">Serie Classica</a>, in cui
+era praticamente tirata a caso.<br>
+La prima cifra (4 o 5) dovrebbe rappresentare il secolo (con un buon beneficio
+di inventario), la seconda rappresenta la stagione di produzione, mentre le
+altre cifre vengono incrementate al procedere degli episodi della stagione in 
+maniera arbitraria.<br>
+Per quanto riguarda la seconda cifra, <i>
+<a target="nav" class="nav" href="../tng/index.html">The Next Generation</a></i> parte da 1, <i>
+<a target="nav" class="nav" href="../dsn/index.html">Deep
+Space Nine</a></i> da 6 e <i><a target="nav" class="nav" href="../voy/index.html">Voyager</a></i> da 8.</p>
+<p><b>Wilford Nusser</b> ha individuato un sistema relativamente accurato (ma
+non <a href="terminologia.html#canon">canonico</a>) per convertire la data del vecchio calendario nella data
+stellare degli episodi di <i><a target="nav" class="nav" href="../tng/index.html">The Next Generation</a></i>.<br>
+Date le variabili:
+<ul>
+  <li><i>DS</i> = data stellare</li>
+  <li><i>a</i> = anno secondo il calendario cristiano</li>
+  <li><i>g</i> = giorno dell'anno (1-365)</li>
+</ul>
+<p>La formula è:<br>
+<i>DS</i> = [ (<i>a</i> - 2323) + (<i>g</i> / 365) ] * 1000</p>
+<p>Bisogna comunque tenere conto di queste annotazioni:
+<ol>
+  <li>Negli anni bisestili sostituire 365 con 366.</li>
+  <li>La data stellare xx000.0 non corrisponde al 1 gennaio ma al 31 dicembre.</li>
+  <li>Il valore assoluto delle date stellari negative diventa più piccolo con
+    il passare del tempo.</li>
+</ol>
+<p>Dalla formula di cui sopra, derivano questi valori:
+<ul>
+  <li>1 anno = 1000 unità di data stellare</li>
+  <li>1 giorno = circa 2,74 unità di data stellare</li>
+  <li>1 ora = circa 0,114 unità di data stellare</li>
+</ul>
+<p>Pierluigi Lenoci ha sviluppato uno script in Java per calcolare la data
+stellare secondo questo algoritmo, si può scaricare lo script all'indirizzo <a href="../files/data.js">www.hypertrek.info/files/data.js</a>.
+Secondo questo algoritmo, la data stellare attuale sarebbe <b>
+<SCRIPT language=JavaScript type="text/javascript">
+<!--
+Stardate();
+-->
+</SCRIPT></b>.</p>
+<p>Di seguito c'è un piccolo programma <b>QuickBASIC</b> che converte la data
+stellare nel vecchio calendario.</p>
+<pre>print
+print
+NumDays% = 365:Month% = 1:Month$ = &quot;December&quot;
+line input &quot;Enter StarDate: &quot;;SD$
+SD = val(SD$)
+Year% = int(SD/1000) + 2323
+if (Year% /4 = int(Year% /4)) then
+   NumDays% = 366
+end if
+DOY = (SD/1000 - Year% + 2323) * NumDays%
+print
+while (DOY &gt; Month%)
+      read Month$,Days%
+      if (NumDays% = 366) and (Days% = 28) then
+         Days% = 29
+      end if
+      Month% = Month% + Days%
+wend
+DOM = DOY - Month% + Days% + 1
+if (Month% = 1) then
+   Year% = Year% - 1
+   DOM = DOY + 31
+end if
+Hour = (DOM - int(DOM)) * 24
+print Year%;Month$;int(DOM);&quot;, &quot;;int(Hour + 0.5);&quot;hrs.&quot;
+
+data &quot;January&quot;,31,&quot;February&quot;,28,&quot;March&quot;,31,&quot;April&quot;,30,&quot;May&quot;,31,&quot;June&quot;,30
+data &quot;July&quot;,31,&quot;August&quot;,31,&quot;September&quot;,30,&quot;October&quot;,31,&quot;November&quot;,30,&quot;December&quot;
+</pre>
+<p>Come si può facilmente immaginare, i vari cicli di if-endif servono per
+compensare gli anni bisestili.</p>
+<hr>
+<script language="JavaScript" type="text/javascript">document.write("<h6>Ultima modifica: ",document.lastModified,"<\/h6>")</script>
+
+</body>
+
+</html>
