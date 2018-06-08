@@ -1,6 +1,6 @@
 <?php
 
-# HyperTrek 3.0.0
+# HyperTrek 3.0.1
 # https://hypertrek.info/
 #
 # This program is free software; you can redistribute it and/or modify
@@ -32,6 +32,7 @@
  * 20120818: aggiunta funzione di cron.daily
  * 20151225: supporto https
  * 20160522: GitHub, setup.ini
+ * 20180608: Link esterno a WikiTrek
  *
  */
  
@@ -64,7 +65,7 @@ $Setup['sitemapname']    = $a['setup']['sitemapname'];   // nome del file del si
 $Setup['rsslast']        = $a['setup']['rsslast'];       // nome del file con il feed RSS delle ultime modifiche
 
 // e gli altri sono hardcoded
-$Setup['versione']        = '3.0.0';                  // versione del software
+$Setup['versione']        = '3.0.1';                  // versione del software
 $Setup['idpaginadefault'] = 10;                       // id della pagina di default
 $Setup['favicon']         = '/static/favicon.ico';    // posizione della favicon
 $Setup['titolo']          = 'HyperTrek | ';           // titolo HTML di default

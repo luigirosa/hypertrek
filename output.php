@@ -1,6 +1,6 @@
 <?php
 
-# HyperTrek 3.0.0
+# HyperTrek 3.0.1
 # https://hypertrek.info/
 #
 # This program is free software; you can redistribute it and/or modify
@@ -23,6 +23,8 @@
  * @author Luigi Rosa <lists@luigirosa.com>
  *
  * 20160522: GitHub
+ * 20180608: Link esterno a WikiTrek
+ *
  */
  
 //protezione
@@ -43,6 +45,7 @@ if(!defined('HYPERTREK')) {
  *
  * 20100131: nuova struttura dei menu
  * 20160522: GitHub
+ * 20180608: Link esterno a WikiTrek
  * 
  */
 
@@ -155,6 +158,7 @@ class ht_pagina {
 	 * 20111105: corretto tag chiusura TD blocconavigazione
 	 * 20151225: supporto https
 	 * 20160522: GitHub
+	 * 20180608: Link esterno a WikiTrek
  	 * 
 	 */
 	function scrivi() {
@@ -210,6 +214,10 @@ class ht_pagina {
 			}
 		} else {	
 			$this->aPagina = $this->dbro->query("SELECT * FROM pagine WHERE idpagina=$this->idpagina")->fetch_array();
+			// se il campo WikiTrek e' valorizzato, aggiungo il riferimento
+			if ('' != $this->aPagina['wikitrek']) {
+				$this->aggiungiRiferimento('Link esterni', $this->espandiLink("{WikiTrek|@". $this->aPagina['wikitrek'] ."}"));
+			}
 			// se il campo IMDb e' valorizzato, aggiungo il riferimento
 			if ('' != $this->aPagina['imdb']) {
 				$this->aggiungiRiferimento('Link esterni', $this->espandiLink("{IMDb|@". $this->aPagina['imdb'] ."}"));
