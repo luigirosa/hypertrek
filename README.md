@@ -28,7 +28,7 @@ Non sono necessari altri privilegi sulle tabelle.
 
 La struttura è tale che anche una SQL injection a causa di un errore di programmazione può al massimo danneggiare dati statistici, ma non può alterare il contenuto delle pagine.
 
-La sicurezza del sistema di contribuzione, che **non** risiede sul serve di pubblicazione è garantita da una access list del server http. Il server MySQL consente l'accesso ad **utente2** solamente dall'IP del sistema di contribuzione.
+La sicurezza del sistema di contribuzione, che **non** risiede sul server di pubblicazione è garantita da una access list del server http. Il server MySQL consente l'accesso ad **utente2** solamente dall'IP del sistema di contribuzione.
 
 # admin
 La cartella admin contiene il sistema di editing del sito. 
