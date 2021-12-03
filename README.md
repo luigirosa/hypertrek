@@ -10,7 +10,7 @@
 
 Il codice originale è stato scritto molti anni fa, dove possibile e se il tempo l'ha permesso sono state apportate migliorie.
 
-La versione pubblicata su GitHub è la 3.0.0. Da qui eventuali nuove versioni seguiranno la filosofia del [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery).
+La versione pubblicata su GitHub è la 3.0.0. Non sono previsti ulteriori aggiornamenti in quanto il progetto è stato migrato su <https://wikitrek.org/>
 
 # Struttura originale
 La struttura originale del sito non era fatta per essere replicata facilmente.
