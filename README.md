@@ -1,4 +1,7 @@
-# Per chi ha fretta
+# HYPERTREK archivio storico sito originale congelato al 2016 
+Questa è la versione del sito convertita in <https://wikitrek.org/> 
+
+## Per chi ha fretta
 - Scaricare il repository
 - Creare due database su MySQL o MariaDB
 - Caricare nei database i due dump presenti nei file TGZ
@@ -6,13 +9,13 @@
 - Rinominare i due file .ini.distrib in .ini e inserire i dati del database: nei file .ini della dir principale inserire l'URL del sito
 - Proteggere, spostare o cancellare la directory **admin** (vedi sotto)
 
-# Sorgenti e dati di hypertrek.info
+## Sorgenti e dati di hypertrek.info
 
 Il codice originale è stato scritto molti anni fa, dove possibile e se il tempo l'ha permesso sono state apportate migliorie.
 
 La versione pubblicata su GitHub è la 3.0.0. Non sono previsti ulteriori aggiornamenti in quanto il progetto è stato migrato su <https://wikitrek.org/>
 
-# Struttura originale
+## Struttura originale
 La struttura originale del sito non era fatta per essere replicata facilmente.
 
 La parte amministrativa di editing dei contenuti gira su un computer diverso (tipicamente quello di casa di Luigi Rosa) dal server su cui gira il sito.
@@ -30,7 +33,7 @@ La struttura è tale che anche una SQL injection a causa di un errore di program
 
 La sicurezza del sistema di contribuzione, che **non** risiede sul server di pubblicazione è garantita da una access list del server http. Il server MySQL consente l'accesso ad **utente2** solamente dall'IP del sistema di contribuzione.
 
-# admin
+## admin
 La cartella admin contiene il sistema di editing del sito. 
 
 **La protezione dell'admin deve essere fatta con metodi esterni** come le access list del server http. Il sistema di contribuzione non ha una gestione utenti.
